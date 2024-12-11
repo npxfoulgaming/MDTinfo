@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cadet Operation Generator</title>
+	<link rel="shortcut icon" href="sasp.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+    <div class="headerbuttons"><a href="https://exsertrook.github.io/legacyrpnepal" target="_blank" class="button">Report Generator HUB</a>
+	</div>
+	<br />
+	Cadet Operation Generator<br />
+	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-100] Dennis Churmurey"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
+
+<body>
+    
+    <div id="form">
+		<datalist id="roster">
+		<option value="[X-100] Dennis Churmurey">Chief of Police</option>
+        <option value="[X-102] Azzoz Yagami">Deputy Chief</option>
+        <option value="[LT-122] Jesse Pinkman">Lieutenant</option>
+        <option value="[LT-123] Sourabh Rathore">Lieutenant</option>
+        <option value="[LT-124] Raj Shinde">Lieutenant</option>
+        <option value="[S-220] Jimmy Cooper">Sergeant</option>
+        <option value="[CO-302] Sickest Girish">Corporal</option>
+        <option value="[CO-303] Royal Romeo">Corporal</option>
+        <option value="[CO-304] Mike Lee">Corporal</option>
+        <option value="[CO-305] Davis Joseph">Corporal</option>
+        <option value="[ST-402] Sudeep Khatri">Senior Trooper</option>
+        <option value="[ST-403] Jack Daniel">Senior Trooper</option>
+        <option value="[TF-501] Smokey Bacon">Trooper First Class</option>
+        <option value="[TF-502] Jonab Kashem">Trooper First Class</option>
+        <option value="[TF-503] Shiva Ram">Trooper First Class</option>
+        <option value="[T-602] Black Mamba">Trooper</option>
+        <option value="[T-603] Marigold Alysaa">Trooper</option>
+        <option value="[T-605] Pahadi Raja">Trooper</option>
+        <option value="[T-606] Chris Smith">Trooper</option>
+        <option value="[T-607] Jange Bahadur">Trooper</option>
+        <option value="[T-609] Thakur cyrus">Trooper</option>
+        <option value="[T-614] Steve Smith">Trooper</option>
+        <option value="[TA-701] Maskey Dawg">Cadet</option>
+        <option value="[TA-702] Raghu Pandey">Cadet</option>
+        <option value="[TA-703] Rocky Wilson">Cadet</option>
+        <option value="[TA-704] kalo ghoda">Cadet</option>
+        <option value="[TA-705] Tyrone T">Cadet</option>
+        <option value="[TA-706] Tayaa Mula">Cadet</option>
+        <option value="[TA-708] Raja Ram">Cadet</option>
+        <option value="[TA-709] Punte Chaudhary">Cadet</option>
+        <option value="[TA-710] Ari Don">Cadet</option>
+        <option value="[TA-713] Anrowws Black">Cadet</option>
+		</datalist>
+		<datalist id="cadetroster">
+			<option value="[TA-701] Lola Boza">Cadet | SASP</option>
+		</datalist>
+		<datalist id="activities">
+			<option value="MDT">Phase 2</option>
+			<option value="DOJ">Phase 2</option>
+			<option value="10-80 Comms">Phase 3 (1 per day)</option>
+			<option value="10-90 Negotiations">Phase 3 (1 per day)</option>
+			<option value="Suspect Processing">Phase 3 (1 per day)</option>
+			<option value="10-80 Primary">Phase 4</option>
+			<option value="10-80 Secondary">Phase 4</option>
+			<option value="10-80 Tertiary">Phase 4</option>
+			<option value="10-80 Parallel">Phase 4</option>
+			<option value="10-11 Traffic Stop">Phase 4 (1 per day)</option>
+			<option value="PIT">Phase 4</option>
+			<option value="Code 5 Stop">Phase 4</option>
+		</datalist>
+		<div class="form-group">
+			<label>Cadet Information:</label>
+			Cadet's Name: <input type="text" autocomplete="on" list="cadetroster" id="cadet" name="cadet" placeholder="[XX-XXX] Name"><br />
+			What Phase?
+			<select id="phase">
+				<option selected></option>
+				<option value="1">Phase 1</option>
+				<option value="2">Phase 2</option>
+				<option value="3">Phase 3</option>
+				<option value="4">Phase 4</option>
+			</select><br /><br />
+			<label>Optional:</label>
+			Patrol Start: <input type="time" id="timestart" name="timestart"><br />
+			Patrol End: <input type="time" id="timeend" name="timeend"><br />
+			Timezone: <input type="text2" id="timezone" name="timezone" placeholder="CST">
+		</div>
+		<div class="form-group">
+			<label>Activities:</label>
+			Successfully completed:<br />
+			1 - <input type="text" autocomplete="on" list="activities" id="activitiescompleted" name="activitiescompleted" placeholder="Choose from the list"><br />
+			2 - <input type="text" autocomplete="on" list="activities" id="activitiescompleted2" name="activitiescompleted2" placeholder="Choose from the list"><br />
+			3 - <input type="text" autocomplete="on" list="activities" id="activitiescompleted3" name="activitiescompleted3" placeholder="Choose from the list"><br />
+			4 - <input type="text" autocomplete="on" list="activities" id="activitiescompleted4" name="activitiescompleted4" placeholder="Choose from the list"><br />
+			5 - <input type="text" autocomplete="on" list="activities" id="activitiescompleted5" name="activitiescompleted6" placeholder="Choose from the list"><br />
+			6 - <input type="text" autocomplete="on" list="activities" id="activitiescompleted6" name="activitiescompleted6" placeholder="Choose from the list"><br />
+			Other - <input type="text" id="activitiescompleted7" name="activitiescompleted7" placeholder="Responded to 10-66">
+		</div>
+		<div class="form-group">
+			<label>Notes:</label>
+			<textarea id="notes" name="notes" placeholder="Notes of the patrol. Write here in detail on how the cadet did at the different activities performed while being on duty."></textarea>
+		</div>
+		<div class="form-group">
+			<label>Patrol Work:</label>
+			How did the cadet do?
+			<select id="patrolwork">
+				<option>Really Good</option>
+				<option>Good</option>
+				<option>Medium</option>
+				<option>Bad</option>
+				<option>Really Bad</option>
+			</select>
+		</div>
+		<div>
+			<label>Cadet Logger:</label><br />
+			Is the Logger Updated? - <input type="checkbox" id="cadetlogger" name="cadetlogger">
+		</div>
+	</div>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
+	<script src="reports.js"></script>
+</body>
+</html>

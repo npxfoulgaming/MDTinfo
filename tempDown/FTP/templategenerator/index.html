@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Template Generator</title>
+	<link rel="shortcut icon" href="sasp.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+	<br />
+	Promotion Template Generator<br />
+	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-100] Dennis Churmurey"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
+
+<body>
+    
+    <div id="form">
+		<datalist id="roster">
+			<option value="[X-100] Dennis Churmurey">Chief of Police</option>
+        <option value="[X-102] Azzoz Yagami">Deputy Chief</option>
+        <option value="[LT-122] Jesse Pinkman">Lieutenant</option>
+        <option value="[LT-123] Sourabh Rathore">Lieutenant</option>
+        <option value="[LT-124] Raj Shinde">Lieutenant</option>
+        <option value="[S-220] Jimmy Cooper">Sergeant</option>
+        <option value="[CO-302] Sickest Girish">Corporal</option>
+        <option value="[CO-303] Royal Romeo">Corporal</option>
+        <option value="[CO-304] Mike Lee">Corporal</option>
+        <option value="[CO-305] Davis Joseph">Corporal</option>
+        <option value="[ST-402] Sudeep Khatri">Senior Trooper</option>
+        <option value="[ST-403] Jack Daniel">Senior Trooper</option>
+        <option value="[TF-501] Smokey Bacon">Trooper First Class</option>
+        <option value="[TF-502] Jonab Kashem">Trooper First Class</option>
+        <option value="[TF-503] Shiva Ram">Trooper First Class</option>
+        <option value="[T-602] Black Mamba">Trooper</option>
+        <option value="[T-603] Marigold Alysaa">Trooper</option>
+        <option value="[T-605] Pahadi Raja">Trooper</option>
+        <option value="[T-606] Chris Smith">Trooper</option>
+        <option value="[T-607] Jange Bahadur">Trooper</option>
+        <option value="[T-609] Thakur cyrus">Trooper</option>
+        <option value="[T-614] Steve Smith">Trooper</option>
+        <option value="[TA-701] Maskey Dawg">Cadet</option>
+        <option value="[TA-702] Raghu Pandey">Cadet</option>
+        <option value="[TA-703] Rocky Wilson">Cadet</option>
+        <option value="[TA-704] kalo ghoda">Cadet</option>
+        <option value="[TA-705] Tyrone T">Cadet</option>
+        <option value="[TA-706] Tayaa Mula">Cadet</option>
+        <option value="[TA-708] Raja Ram">Cadet</option>
+        <option value="[TA-709] Punte Chaudhary">Cadet</option>
+        <option value="[TA-710] Ari Don">Cadet</option>
+        <option value="[TA-713] Anrowws Black">Cadet</option>
+		</datalist>
+		<div class="form-group">
+			<label>Promotions:</label>
+			<select id="listpromotions">
+				<option selected></option>
+				<option>P5 > Trooper</option>
+				<option>Junior Trainer > Trainer</option>
+				<option>D</option>
+			</select>
+		</div>
+	</div>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
+	<script src="reports.js"></script>
+</body>
+</html>
