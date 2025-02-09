@@ -49,13 +49,13 @@ function report() {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'none';
 		robberyString = robbery;
-		ROBBERY_STATE = 'BANK';
+		ROBBERY_STATE = 'JEWLERY';
 	}
 	if (robbery.trim() === 'Pacific Bank') {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'none';
 		robberyString = robbery;
-		ROBBERY_STATE = 'JEWLERY';
+		ROBBERY_STATE = 'BANK';
 	}
 
     buffer.push(`[ROBBERY TYPE]:`);
