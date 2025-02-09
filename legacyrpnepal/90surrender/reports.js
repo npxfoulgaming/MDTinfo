@@ -55,7 +55,7 @@ function report() {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'none';
 		robberyString = robbery;
-		ROBBERY_STATE = 'BANK';
+		ROBBERY_STATE = 'JEWLERY';
 	}
 
     buffer.push(`[ROBBERY TYPE]:`);
