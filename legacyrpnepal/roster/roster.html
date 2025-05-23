@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Police Department Roster</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #121212;
+      border-right: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar a {
+      padding: 14px 20px;
+      color: #bbb;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    /* Disable hover for non-active links */
+    .sidebar a:not(.active):hover {
+      background-color: inherit;
+      color: #bbb;
+      border-left: 3px solid transparent;
+      cursor: default;
+    }
+
+    /* Active link styling */
+    .sidebar a.active {
+      background-color: #2a2a2a;
+      color: #fff;
+      font-weight: bold;
+      border-left: 3px solid #3f8efc;
+    }
+
+    /* Hover effect only on active link */
+    .sidebar a.active:hover {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    .main {
+      flex-grow: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .roster-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .roster-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .roster-box {
+      background-color: #111;
+      border: 1px solid #444;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: #000;
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    tbody {
+      display: block;
+      max-height: calc(40px * 13); /* show 12 rows */
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    tbody tr {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      font-size: 15px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #2e2e2e;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #3a3a3a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+<div style="text-align: center; padding-bottom: 20px;">
+  <img src="sasp.png" alt="SASP Mobile Data Terminal"
+     style="width: 80px; height: 80px; border-radius: 50%;
+            border: 2px solid #3f8efc; margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
+  <div style="color: #fff; font-weight: bold;">SASP Mobile Data Terminal</div>
+</div>
+    <a href="roster.html">Roster</a>
+    <a href="penal.html">Penal Code</a>
+  </div>
+
+<div class="main">
+  <div class="roster-container">
+    <div class="roster-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <div class="roster-title">Public SASP Roster</div>
+      <div class="department-counts" style="display: flex; gap: 20px; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <img src="sasp.png" alt="SASP" style="width: 24px; height: 24px;"> SASP: <span id="sasp-count">0</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <img src="bcso.png" alt="BCSO" style="width: 24px; height: 24px;"> BCSO: <span id="bcso-count">0</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <img src="sahp.png" alt="SAHP" style="width: 24px; height: 24px;"> SAHP: <span id="sahp-count">0</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 5px;">
+          <strong>Total:</strong> <span id="total-count">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="roster-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Callsign</th>
+              <th>Name</th>
+              <th>Rank</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>PO-666</td><td>Rocky Mill</td><td>Probationary Officer</td><td>SASP</td></tr>
+            <tr><td>PO-669</td><td>Enzo Knightt</td><td>Probationary Officer</td><td>SASP</td></tr>
+            <tr><td>PO-685</td><td>Reffel Lawrence</td><td>Probationary Officer</td><td>SASP</td></tr>
+            <tr><td>PO-696</td><td>Joshua Stone</td><td>Probationary Officer</td><td>SASP</td></tr>
+            <tr><td>PO-698</td><td>Guus Degroot</td><td>Probationary Officer</td><td>SASP</td></tr>
+            <tr><td>TA-701</td><td>Grizz Lee</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-702</td><td>Valerie Edwards</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-704</td><td>James Phillips</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-705</td><td>Ryan Gonzalez</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-707</td><td>Jacob Page</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-709</td><td>Ibe Williams</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-711</td><td>Jimmy Castle</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-713</td><td>Lucas Green</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-715</td><td>Axel Riggs</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-718</td><td>Scarlett Rain</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-719</td><td>Kaleb Axel</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-720</td><td>Ethan Wolfe</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-722</td><td>Eevee Hunter</td><td>Cadet</td><td>SASP</td></tr>
+            <tr><td>TA-727</td><td>Juniper Rowan</td><td>Cadet</td><td>SASP</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Get current filename from URL
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Get all sidebar links
+  const links = document.querySelectorAll('.sidebar a');
+
+  // Loop through links and set active class based on href match
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+
+  // Count officers by department and total
+  const rows = document.querySelectorAll('tbody tr');
+  let sasp = 0, bcso = 0, sahp = 0, total = 0;
+  rows.forEach(row => {
+    const dept = row.children[3].textContent.trim().toUpperCase();
+    if (dept === "SASP") sasp++;
+    else if (dept === "BCSO") bcso++;
+    else if (dept === "SAHP") sahp++;
+    total++;
+  });
+
+  document.getElementById('sasp-count').textContent = sasp;
+  document.getElementById('bcso-count').textContent = bcso;
+  document.getElementById('sahp-count').textContent = sahp;
+  document.getElementById('total-count').textContent = total;
+</script>
+
+</body>
+</html>
