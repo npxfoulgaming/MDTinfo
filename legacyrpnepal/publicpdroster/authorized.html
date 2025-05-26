@@ -170,8 +170,10 @@
     <div class="roster-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
       <div class="roster-title">Public SASP Roster</div>
       <div class="department-counts" style="display: flex; gap: 20px; align-items: center;">
-        <div style="display: flex; align-items: center; gap: 5px;">
-          <img src="sasp.png" alt="SASP" style="width: 24px; height: 24px;"> <strong>Total:</strong> <span id="total-count">0</span>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <button id="guide-btn" style="background: none; border: none; color: #3f8efc; font-size: 20px; cursor: pointer;" title="Guide">ℹ️Guide</button>
+          <img src="sasp.png" alt="SASP" style="width: 24px; height: 24px;">
+          <strong>Total:</strong> <span id="total-count">0</span>
         </div>
       </div>
     </div>
@@ -190,7 +192,7 @@
           <tr>
             <td>X-100</td>
             <td>Dennis Churmurey</td>
-            <td>2024-06-01</td>
+            <td>2025-5-26</td>
             <td>
               <span class="tag">AR</span>
               <span class="tag">SMG</span>
@@ -221,6 +223,7 @@
             <td>2025-5-26</td>
             <td>
               <span class="tag">AR</span>
+
             </td>
             <td>
               <span class="tag">Bike</span>
@@ -282,7 +285,7 @@
           </tr>
           <tr>
             <td>T-608</td>
-            <td>Ist Arrow</td>
+            <td>Ist Aarrow</td>
             <td>2025-5-26</td>
             <td>
               <span class="tag">AR</span>
@@ -367,6 +370,23 @@
     </div>
   </div>
 
+<!-- Guide Modal -->
+<div id="guide-modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);">
+  <div style="background-color: #1e1e1e; margin: 10% auto; padding: 20px; border: 1px solid #444; width: 90%; max-width: 500px; border-radius: 8px; color: white; position: relative;">
+    <span id="close-guide" style="position: absolute; top: 10px; right: 15px; color: #ff0000; font-size: 24px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h2 style="margin-top: 0;">📘 Guide</h2>
+    <ul style="line-height: 1.6;">
+      <li><strong>Cadet</strong> = <strong>Any SMGs</strong> (only If your Name is in below list)</li>
+      <li><strong>Trooper</strong> = <strong>H&K 416</strong> (only If your Name is in below list)</li>
+      <li><strong>Trooper 1st Class</strong> = <strong>LWRC M6IC</strong> (only If your Name is in below list)</li>
+      <li><strong>Senior Trooper</strong> = <strong>Carbine Rifle</strong> (only If your Name is in below list)</li>
+      <li><strong>Corporal - Sergeant First Class</strong> = <strong>Carbine Rifle MKII</strong> (only If your Name is in below list)</li>
+      <li><strong>Low Command</strong> = <strong> Special Carbine Rifle</strong> (only If your Name is in below list)</li>
+      <li><strong>High Command</strong> = <strong>Special Carbine Rifle MK II</strong> (only If your Name is in below list)</li>
+    </ul>
+  </div>
+</div>
+
 <script>
   // Highlight current active sidebar link
   const currentPage = window.location.pathname.split("/").pop();
@@ -386,6 +406,24 @@
   });
 
   document.getElementById('total-count').textContent = total;
+
+  const guideBtn = document.getElementById('guide-btn');
+  const guideModal = document.getElementById('guide-modal');
+  const closeGuide = document.getElementById('close-guide');
+
+  guideBtn.addEventListener('click', () => {
+    guideModal.style.display = 'block';
+  });
+
+  closeGuide.addEventListener('click', () => {
+    guideModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target == guideModal) {
+      guideModal.style.display = 'none';
+    }
+  });
 </script>
 
 </body>
