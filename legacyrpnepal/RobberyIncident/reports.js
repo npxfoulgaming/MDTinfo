@@ -376,29 +376,47 @@ function report() {
 	let medneedsus = document.getElementById('medneedsus').value;
 	let medneedpd = document.getElementById('medneedpd').value;
 	let hospitalname = document.getElementById('hospitalname').value;
+
 	if (document.getElementById('cend').checked) {
+		let suspectsArrested = document.getElementById('suspects').value;
+
+		buffer.push('');
+		buffer.push(`[ARRESTED SUSPECTS]:`);
+		buffer.push(`A total of ${suspectsArrested} suspect(s) were apprehended.`);
+
 		if (document.getElementById('medneed').checked) {
 			buffer.push('');
 			buffer.push(`[MEDICAL ATTENTION]:`);
 			buffer.push(`After we apprehended the suspects, they were in need of medical attention. We brought the injured people (Suspects Total: ${medneedsus} | PD Total: ${medneedpd}) to ${hospitalname}.`);
-			buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`)
+			buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`);
 		} else {
 			buffer.push('');
 			buffer.push(`[MEDICAL ATTENTION]:`);
 			buffer.push(`Due to no suspects or officers having any major injuries, everyone waved their rights to medical attention.`);
 		}
-		if (document.getElementById('runhospital').checked) {
-			buffer.push(`The suspect attempted to flee at the hospital but was apprehended.`);
-		}
+
+if (document.getElementById('runhospital').checked) {
+    let hospitalOutcome = document.getElementById('hospitalFollowup').value;
+    if (hospitalOutcome === "escaped") {
+        buffer.push(`The suspect attempted to flee at the hospital and successfully escaped.`);
+    } else if (hospitalOutcome === "caught") {
+        buffer.push(`The suspect attempted to flee at the hospital but was caught shortly after.`);
+    } else {
+        buffer.push(`The suspect attempted to flee at the hospital.`);
+    }
+}
+
 		buffer.push('');
-    	buffer.push('[PROCESSED]:');
+		buffer.push('[PROCESSED]:');
 		buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 
 		if (document.getElementById('nocontest').checked) {
 			buffer.push(`The suspect plead no contest.`);
 		}
-    }
+	}
+
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
+
 }
 
 let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
@@ -451,3 +469,26 @@ function copy() {
 		console.log("Copy error: " + e);
 	}
 }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const cendCheckbox = document.getElementById('cend');
+    const suspectsContainer = document.getElementById('suspects-container');
+    
+    suspectsContainer.style.display = cendCheckbox.checked ? 'block' : 'none';
+
+    cendCheckbox.addEventListener('change', function () {
+      suspectsContainer.style.display = this.checked ? 'block' : 'none';
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const runHospitalCheckbox = document.getElementById('runhospital');
+    const hospitalFollowupContainer = document.getElementById('hospitalFollowupContainer');
+
+    const toggleHospitalFollowup = () => {
+      hospitalFollowupContainer.style.display = runHospitalCheckbox.checked ? 'block' : 'none';
+    };
+
+    toggleHospitalFollowup(); // initialize on load
+    runHospitalCheckbox.addEventListener('change', toggleHospitalFollowup);
+  });

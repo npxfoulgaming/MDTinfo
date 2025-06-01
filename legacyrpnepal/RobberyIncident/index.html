@@ -275,9 +275,23 @@
 			</select><br />
 		</div>
 		<div class="form-group">
-			<input type="checkbox" id="cend" name="cend" value="cend">
-			<label for="checkedoff">Check this once they have been caught only!
-		</div>	
+		<input type="checkbox" id="cend" name="cend" value="cend">
+		<label for="cend">Check this once they have been caught only!</label>
+		</div>
+
+		<div class="form-group" id="suspects-container" style="display: none;">
+		<label for="suspects">How many suspects got arrested?</label> 
+		<select id="suspects" name="suspects">
+			<option value="" disabled selected>Select number</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+		</select>
+		</div>
+
 		<div class="form-group">
 			<label>Medical Attention...</label>
 			- Was it needed? <input type="checkbox" id="medneed" name="medneed" value="medneed"><br />
@@ -325,6 +339,14 @@
 			</select>
 			<br />
 			<input type="checkbox" id="runhospital" name="runhospital" value="runhospital"> - Check if Attempted to flee at hospital
+		</div>
+		<div class="form-group" id="hospitalFollowupContainer" style="display: none;">
+		<label for="hospitalFollowup">Did they escape after fleeing at hospital or got caught after?</label>
+		<select id="hospitalFollowup" name="hospitalFollowup">
+			<option value="" disabled selected>Select outcome</option>
+			<option value="escaped">They escaped after fleeing.</option>
+			<option value="caught">They were caught after fleeing.</option>
+		</select>
 		</div>
 		<div class="form-group">
 			<label>Processed at...</label>
