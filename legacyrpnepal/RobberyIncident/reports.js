@@ -401,6 +401,17 @@ function report() {
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+	const cendCheckbox = document.getElementById('cend');
+	const suspectsContainer = document.getElementById('suspects-container');
+	
+	suspectsContainer.style.display = cendCheckbox.checked ? 'block' : 'none';
+
+	cendCheckbox.addEventListener('change', function () {
+	suspectsContainer.style.display = this.checked ? 'block' : 'none';
+	});
+});
+
 let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
 
