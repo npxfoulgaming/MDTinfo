@@ -15,81 +15,37 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push("**[TRAINING OFFICER]:**");
-	buffer.push(callsign);
-	buffer.push(``);
 	/// INFO
-	let cadetname = document.getElementById('cadet').value;
-	let phase = document.getElementById('phase').value;
-	let timestart = document.getElementById('timestart').value;
-	let timeend = document.getElementById('timeend').value;
-	let timezone = document.getElementById('timezone').value;
+	
+	let aselected = document.getElementById('listpromotions');
+	let aInfo = {
+		'P5 > Trooper': {
+			text: '',
+			text2: '',
+			text3: '**PROMOTED**',
+			text4: '',
+			text5: 'Due to successfully passing your final evaluation you are now promoted to a Trooper! Congratulations! Your new call sign is T-619',
+		},
+		'Junior Trainer > Trainer': {
+			text: '',
+			text2: '',
+			text3: '**PROMOTED**',
+			text4: '',
+			text5: 'Due to your outstanding work & dedication to the Field Training Division, you have been promoted to **Field Trainer**. Keep up the amazing work! :cowboyHyperS:',
+		},
+		'D': {
+			text: 'Line 1',
+			text2: 'Line 2',
+		}
+	}
+	let a = aselected.options[aselected.selectedIndex].text;
+	buffer.push(aInfo[a].text);
+	buffer.push(aInfo[a].text2);
+	buffer.push(aInfo[a].text3);
+	buffer.push(aInfo[a].text4);
+	buffer.push(aInfo[a].text5);
 
-	let activities = document.getElementById('activitiescompleted').value;
-	let activities2 = document.getElementById('activitiescompleted2').value;
-	let activities3 = document.getElementById('activitiescompleted3').value;
-	let activities4 = document.getElementById('activitiescompleted4').value;
-	let activities5 = document.getElementById('activitiescompleted5').value;
-	let activities6 = document.getElementById('activitiescompleted6').value;
-	let activities7 = document.getElementById('activitiescompleted7').value;
-	let notes = document.getElementById('notes').value;
-	let patrolwork = document.getElementById('patrolwork').value;
 
-	if (cadetname) {
-		buffer.push(`**[CADET]:**`);
-		buffer.push(`${cadetname}`);
-		buffer.push(``);
-	}
-	if (phase) { 
-		buffer.push(`**Phase:** ${phase}`);
-		buffer.push(``);
-	}
-	if (timestart) {
-		buffer.push(`**Patrol Started:** ${timestart} ${timezone}`);
-		buffer.push(`**Patrol Ended:** ${timeend} ${timezone}`)
-		buffer.push(``);
-	}
-	if (activities) {
-		buffer.push(`**Activities Completed Successfully:**`);
-		buffer.push(`*${activities}*`);
-	}
-	if (activities2) {
-		buffer.push(`*${activities2}*`);
-	}
-	if (activities3) {
-		buffer.push(`*${activities3}*`);
-	}
-	if (activities4) {
-		buffer.push(`*${activities4}*`);
-	}
-	if (activities5) {
-		buffer.push(`*${activities5}*`);
-	}
-	if (activities6) {
-		buffer.push(`*${activities6}*`);
-	}
-	if (activities7) {
-		buffer.push(`*${activities7}*`);
-	}
-	
-	buffer.push(``);
-	if (notes) {
-		buffer.push(`**Notes:**`);
-		buffer.push(`${notes}`);
-		buffer.push(``);
-	}
-	
-	if (patrolwork) {
-		buffer.push(`Overall the cadet did ${patrolwork} while being on duty.`)
-		buffer.push(``);
-	}
-	
-	if (document.getElementById('cadetlogger').checked) {
-		buffer.push(`**Cadet Logger - Updated**`);
-	} else {
-		buffer.push(`**Cadet Logger - Not Updated**`);
-	}
-	
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 
 }

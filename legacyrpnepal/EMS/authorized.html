@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="https://i.ibb.co/RTH1qcFH/sasp.png"/>
-  <title>San Andreas State Police</title>
+  <link rel="icon" href="https://i.ibb.co/cKzzV9Pq/EMS.png"/>
+  <title>San Andreas EMS Authorized</title>
   <style>
     * {
       box-sizing: border-box;
@@ -110,7 +110,7 @@
 
     tbody {
       display: block;
-      max-height: calc(40px * 14); /* show 12 rows */
+      max-height: calc(40px * 13); /* show 12 rows */
       overflow-y: auto;
       width: 100%;
     }
@@ -140,17 +140,18 @@
       background-color: #3a3a3a;
     }
   </style>
+
 </head>
 <body>
 
   <div class="sidebar">
-<div style="text-align: center; padding-bottom: 20px;">
-  <img src="sasp.png" alt="Public SASP Roster"
-     style="width: 80px; height: 80px; border-radius: 50%;
-            border: 2px solid #3f8efc; margin-bottom: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
-  <div style="color: #fff; font-weight: bold;">Public SASP Roster</div>
-</div>
+    <div style="text-align: center; padding-bottom: 20px;">
+      <img src="ems.png" alt="Public EMS Authorized"
+           style="width: 80px; height: 80px; border-radius: 50%;
+                  border: 2px solid #3f8efc; margin-bottom: 10px;
+                  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
+      <div style="color: #fff; font-weight: bold;">Public EMS Authorized</div>
+    </div>
     <a href="roster.html">
       <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
       Roster
@@ -159,60 +160,54 @@
       <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
       Authorized Units
     </a>
-    <a href="penal.html">
-      <img src="penal.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-      Penal Code
-    </a>
   </div>
 
-<div class="main">
-  <div class="roster-container">
-    <div class="roster-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-      <div class="roster-title">Public SASP Roster</div>
-      <div class="department-counts" style="display: flex; gap: 20px; align-items: center;">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <button id="guide-btn" style="background: none; border: none; color: #3f8efc; font-size: 20px; cursor: pointer;" title="Guide">ℹ️Guide</button>
-          <img src="sasp.png" alt="SASP" style="width: 24px; height: 24px;">
-          <strong>Total:</strong> <span id="total-count">0</span>
+  <div class="main">
+    <div class="roster-container">
+      <div class="roster-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div class="roster-title">Public EMS Authorized</div>
+        <div class="department-counts" style="display: flex; gap: 20px; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <button id="guide-btn" style="background: none; border: none; color: #3f8efc; font-size: 20px; cursor: pointer;" title="Guide">ℹ️Guide</button>
+            <img src="ems.png" alt="EMS" style="width: 24px; height: 24px;">
+            <strong>Total:</strong> <span id="total-count">0</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="roster-box">
-      <table>
-        <thead>
-          <tr>
-            <th>Callsign</th>
-            <th>Name</th>
-            <th>Date Of Authorized</th>
-            <th>Authorized Weapons</th>
-            <th>Authorized Units</th>
-          </tr>
-        </thead>
-        <tbody id="authorized-body">
-        </tbody>
-      </table>
-    </div>
+      <div class="roster-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Callsign</th>
+              <th>Name</th>
+              <th>Date Of Authorized</th>
+              <th>Authorized Equipment</th>
+              <th>Authorized Units</th>
+            </tr>
+          </thead>
+          <tbody id="authorized-body">
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
-<!-- Guide Modal -->
-<div id="guide-modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);">
-  <div style="background-color: #1e1e1e; margin: 10% auto; padding: 20px; border: 1px solid #444; width: 90%; max-width: 500px; border-radius: 8px; color: white; position: relative;">
-    <span id="close-guide" style="position: absolute; top: 10px; right: 15px; color: #ff0000; font-size: 24px; font-weight: bold; cursor: pointer;">&times;</span>
-    <h2 style="margin-top: 0;">📘 Guide</h2>
-    <ul style="line-height: 1.6;">
-      <li><strong>Cadet</strong> = <strong>Any SMGs</strong> (only If your Name is in below list)</li>
-      <li><strong>Trooper</strong> = <strong>H&K 416</strong> (only If your Name is in below list)</li>
-      <li><strong>Trooper 1st Class</strong> = <strong>LWRC M6IC</strong> (only If your Name is in below list)</li>
-      <li><strong>Senior Trooper</strong> = <strong>Carbine Rifle</strong> (only If your Name is in below list)</li>
-      <li><strong>Corporal - Sergeant First Class</strong> = <strong>Carbine Rifle MKII</strong> (only If your Name is in below list)</li>
-      <li><strong>Low Command</strong> = <strong> Special Carbine Rifle</strong> (only If your Name is in below list)</li>
-      <li><strong>High Command</strong> = <strong>Special Carbine Rifle MK II</strong> (only If your Name is in below list)</li>
-    </ul>
+  <!-- Guide Modal -->
+  <div id="guide-modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);">
+    <div style="background-color: #1e1e1e; margin: 10% auto; padding: 20px; border: 1px solid #444; width: 90%; max-width: 500px; border-radius: 8px; color: white; position: relative;">
+      <span id="close-guide" style="position: absolute; top: 10px; right: 15px; color: #ff0000; font-size: 24px; font-weight: bold; cursor: pointer;">&times;</span>
+      <h2 style="margin-top: 0;">📘 Guide</h2>
+      <ul style="line-height: 1.6;">
+        <li><strong>EMT-B</strong> = Basic Life Support Gear</li>
+        <li><strong>EMT-I</strong> = Intermediate Life Support Gear</li>
+        <li><strong>EMT-P</strong> = Paramedic Gear</li>
+        <li><strong>Field Supervisor</strong> = Advanced Medical Kits + Command Radio</li>
+        <li><strong>Command Staff</strong> = All Gear + EMS Command Vehicle</li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<script src="authorized.js"></script>
+  <script src="authorized.js"></script>
 
 </body>
 </html>

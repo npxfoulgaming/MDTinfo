@@ -162,3 +162,36 @@ function copy() {
 		console.log("Copy error: " + e);
 	}
 }
+
+// Define rank prefixes
+const rankPrefixes = {
+  "Cadet": "TA-",
+  "Trooper": "T-",
+  "Sergeant": "S-",
+  "Lieutenant": "LT-",
+  "Trooper 1st Class": "TF-",
+  "Senior Trooper": "ST-",
+  "Sergeant 1st Class": "SF-",
+  "Corporal": "CO-",
+  "Deputy Chief": "X-",
+  "Assistant Chief": "X-",
+  "Chief of Police": "X-"
+  
+};
+
+fetch('../officers.json')
+  .then(response => response.json())
+  .then(data => {
+    const datalist = document.getElementById("roster");
+
+    data.forEach(officer => {
+      const prefix = rankPrefixes[officer["Officer Rank"]] || "X-"; // Default if not defined
+      const callsign = `${prefix}${officer.ID}`;
+
+      const option = document.createElement("option");
+      option.value = `[${callsign}] ${officer["Officer Name"]}`;
+      option.textContent = officer["Officer Rank"];
+      datalist.appendChild(option);
+    });
+  })
+  .catch(error => console.error("Error loading officers:", error));

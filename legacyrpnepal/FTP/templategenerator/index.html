@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Template Generator</title>
+	<link rel="shortcut icon" href="sasp.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+	<br />
+	Promotion Template Generator<br />
+	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-100] Dennis Churmurey"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
+
+<body>
+    
+    <div id="form">
+		<datalist id="roster"> </datalist>
+
+		<div class="form-group">
+			<label>Promotions:</label>
+			<select id="listpromotions">
+				<option selected></option>
+				<option>P5 > Trooper</option>
+				<option>Junior Trainer > Trainer</option>
+				<option>D</option>
+			</select>
+		</div>
+	</div>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;And Also if you want to show love, Join <a href="https://discord.gg/xQDW7GtREZ" target="_blank">Legacy Roleplay Nepal Discord Sever</a> :)</textarea>
+	<script src="reports.js"></script>
+</body>
+</html>

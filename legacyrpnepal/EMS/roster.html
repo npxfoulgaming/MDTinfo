@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="https://i.ibb.co/RTH1qcFH/sasp.png"/>
-  <title>San Andreas State Police</title>
+  <link rel="icon" href="https://i.ibb.co/cKzzV9Pq/EMS.png"/> <!-- Change to EMS logo -->
+  <title>San Andreas EMS</title>
   <style>
     * {
       box-sizing: border-box;
@@ -98,7 +98,7 @@
 
     tbody {
       display: block;
-      max-height: calc(40px * 14); /* show 12 rows */
+      max-height: calc(40px * 13); /* show 12 rows */
       overflow-y: auto;
       width: 100%;
     }
@@ -202,67 +202,60 @@
 <body>
 
   <div class="sidebar">
-<div style="text-align: center; padding-bottom: 20px;">
-  <img src="sasp.png" alt="Public SASP Roster"
-     style="width: 80px; height: 80px; border-radius: 50%;
-            border: 2px solid #3f8efc; margin-bottom: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
-  <div style="color: #fff; font-weight: bold;">Public SASP Roster</div>
-</div>
-    <a href="roster.html">
+    <div style="text-align: center; padding-bottom: 20px;">
+      <img src="ems.png" alt="Public EMS Roster"
+        style="width: 80px; height: 80px; border-radius: 50%;
+              border: 2px solid #3f8efc; margin-bottom: 10px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
+      <div style="color: #fff; font-weight: bold;">Public EMS Roster</div>
+    </div>
+    <a href="roster.html" class="active">
       <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-      Roster
+      EMS Roster
     </a>
     <a href="authorized.html">
       <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
       Authorized Units
     </a>
-    <a href="penal.html">
-      <img src="penal.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
-      Penal Code
-    </a>
   </div>
 
-<div class="main">
-  <div class="roster-container">
-    <div class="roster-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-      <div class="roster-title">Public SASP Roster</div>
-      <div class="department-counts" style="display: flex; gap: 20px; align-items: center;">
-        <div style="display: flex; align-items: center; gap: 5px;">
-          <img src="sasp.png" alt="SASP" style="width: 24px; height: 24px;"> SASP: <span id="sasp-count">0</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 5px;">
-          <img src="bcso.png" alt="BCSO" style="width: 24px; height: 24px;"> BCSO: <span id="bcso-count">0</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 5px;">
-          <img src="sahp.png" alt="SAHP" style="width: 24px; height: 24px;"> SAHP: <span id="sahp-count">0</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 5px;">
-          <strong>Total:</strong> <span id="total-count">0</span>
+  <div class="main">
+    <div class="roster-container">
+      <div class="roster-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div class="roster-title">Public EMS Roster</div>
+        <div class="department-counts" style="display: flex; gap: 20px; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <img src="ems.png" alt="EMS" style="width: 24px; height: 24px;"> EMS: <span id="ems-count">0</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <img src="bcfd.png" alt="EMS" style="width: 24px; height: 24px;"> BCFD: <span id="bcfd-count">0</span>
+          </div>     
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <strong>Total:</strong> <span id="total-count">0</span>
+          </div>
         </div>
       </div>
-    </div>
-    
-  <div class="roster-box">
-    <table>
-      <thead>
-        <tr>
-          <th>Callsign</th>
-          <th>Name</th>
-          <th>Rank</th>
-          <th>Department</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody id="roster-body">
-        
-      </tbody>
-    </table>
-  </div>
+
+      <div class="roster-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Callsign</th>
+              <th>Name</th>
+              <th>Rank</th>
+              <th>Department</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="roster-body">
+            <!-- Rows dynamically inserted by roster.js -->
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
-<script src="roster.js"></script>
+  <script src="roster.js"></script>
 
 </body>
 </html>

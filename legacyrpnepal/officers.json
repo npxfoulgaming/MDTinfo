@@ -1,0 +1,422 @@
+[
+  {
+    "Officer Name": "Dennis Churmurey",
+    "Officer Rank": "Chief of Police",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 100,
+    "Authorized Units": ["Speed", "Bike", "Air"],
+    "Authorized Weapons": ["All ARs", "All SMGs", "All ShotGuns"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Azzoz Yagami",
+    "Officer Rank": "Deputy Chief",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 102,
+    "Authorized Units": ["Speed", "Bike", "Air"],
+    "Authorized Weapons": ["Special Carbine Rifle MK II"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Sourabh Rathore",
+    "Officer Rank": "Lieutenant",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 120,
+    "Authorized Units": ["Bike", "Air"],
+    "Authorized Weapons": ["Special Carbine Rifle"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Raj Shinde",
+    "Officer Rank": "Sergeant 1st Class",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 201,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Sickest Girish",
+    "Officer Rank": "Sergeant",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 223,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Smokey Bacon",
+    "Officer Rank": "Corporal",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 301,
+    "Authorized Units": ["Speed", "Air"],
+    "Authorized Weapons": ["Carbine Rifle MK II"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Atul Shrestha",
+    "Officer Rank": "Senior Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 401,
+    "Authorized Units": [],
+    "Authorized Weapons": ["Carbine Rifle"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Singham Pandey",
+    "Officer Rank": "Trooper 1st Class",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 503,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Sodeep Khatri",
+    "Officer Rank": "Trooper 1st Class",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 504,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Raven Hora",
+    "Officer Rank": "Trooper 1st Class",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 505,
+    "Authorized Units": ["Speed"],
+    "Authorized Weapons": ["LWRC M6IC"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Ari Don",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 601,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Thakur Cyrus",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 602,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Phoenix Muntey",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 607,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Ist Arrow",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 608,
+    "Authorized Units": ["Speed"],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Ethan Hunt",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 609,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Andy Max",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 610,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Menace Lama",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 611,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Krisne Parsad",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 612,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Black Theeng",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 613,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Mr Fantom",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 614,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Sarki Yaro",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 701,
+    "Authorized Units": [],
+    "Authorized Weapons": ["SMGs"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Dr Shrestha",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 702,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Johan Khatri",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 703,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Degu Lama",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 704,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Spidey Khatra",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 705,
+    "Authorized Units": [],
+    "Authorized Weapons": ["SMGs"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Mastic Prasad",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 706,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Bibek Shrestha",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 707,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Harry Miller",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 708,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Arjun Parker",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 709,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Dawa Lama",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 710,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Rowdy Rathore",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 711,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "John Magar",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 712,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Mr Kalo Aringal",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 713,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Kagami Horw",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 714,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Khamu Yadav",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 715,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Ins Bubblegum",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 716,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Punisher Mhj",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 717,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Andrew Tait",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 718,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Srijal Bahadur",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 719,
+    "Authorized Units": [],
+    "Authorized Weapons": ["SMGs"],
+    "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Bibek Bhandari",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 720,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Oct Ane",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 721,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Chitu Raja",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "InActive",
+    "ID": 722,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  }
+]
