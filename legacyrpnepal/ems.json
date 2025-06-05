@@ -6,8 +6,8 @@
     "Department": "EMS",
     "Status": "Active",
     "Authorized Date": "2025-06-01",
-    "Authorized Weapons": [],
-    "Authorized Units": []
+    "Authorized Weapons": ["Carbine Rifle"],
+    "Authorized Units": ["Air"]
   },
   {
     "ID": "210",
@@ -17,7 +17,7 @@
     "Status": "Active",
     "Authorized Date": "",
     "Authorized Weapons": [],
-    "Authorized Units": []
+    "Authorized Units": ["Air"]
   },
   {
     "ID": "500",
