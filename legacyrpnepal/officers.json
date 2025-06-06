@@ -110,6 +110,16 @@
     "Authorized Date": "2025-05-26"
   },
   {
+    "Officer Name": "Jack Daniel",
+    "Officer Rank": "Trooper 1st Class",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 501,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Singham Pandey",
     "Officer Rank": "Trooper 1st Class",
     "Department": "SASP",
