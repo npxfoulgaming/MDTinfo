@@ -174,7 +174,17 @@
     "Officer Rank": "Trooper",
     "Department": "SASP",
     "Status": "Active",
-    "ID": 603,
+    "ID": 604,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Rex White",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 605,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
