@@ -49,9 +49,29 @@
     "Authorized Weapons": [],
     "Authorized Units": []
   },
+    {
+    "ID": "503",
+    "Officer Name": "Walter White",
+    "Officer Rank": "Paramedic",
+    "Department": "EMS",
+    "Status": "Active",
+    "Authorized Date": "",
+    "Authorized Weapons": [],
+    "Authorized Units": []
+  },
   {
     "ID": "504",
     "Officer Name": "Winter Soldier",
+    "Officer Rank": "Paramedic",
+    "Department": "EMS",
+    "Status": "Active",
+    "Authorized Date": "",
+    "Authorized Weapons": [],
+    "Authorized Units": []
+  },
+  {
+    "ID": "505",
+    "Officer Name": "Dr Jhadka",
     "Officer Rank": "Paramedic",
     "Department": "EMS",
     "Status": "Active",
@@ -99,16 +119,6 @@
     "Authorized Weapons": [],
     "Authorized Units": []
     
-  },
-  {
-    "ID": "654",
-    "Officer Name": "Walter White",
-    "Officer Rank": "EMT",
-    "Department": "EMS",
-    "Status": "Active",
-    "Authorized Date": "",
-    "Authorized Weapons": [],
-    "Authorized Units": []
   },
   {
     "ID": "656",
