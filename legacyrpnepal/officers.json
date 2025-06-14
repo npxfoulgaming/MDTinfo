@@ -16,8 +16,8 @@
     "Status": "Active",
     "ID": 102,
     "Authorized Units": ["Speed", "Bike", "Air"],
-    "Authorized Weapons": ["Special Carbine Rifle MK II, All ShotGuns"],
-    "Authorized Date": "2025-05-26"
+    "Authorized Weapons": ["Special Carbine Rifle MK II", "All ShotGuns"],
+    "Authorized Date": "2025-06-14"
   },
   {
     "Officer Name": "Sourabh Rathore",
