@@ -189,6 +189,16 @@
     "Authorized Weapons": [],
     "Authorized Date": ""
   },
+   {
+    "Officer Name": "Tathastu UWU",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 606,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
   {
     "Officer Name": "Phoenix Muntey",
     "Officer Rank": "Trooper",
@@ -229,6 +239,16 @@
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-05-26"
   },
+   {
+    "Officer Name": "Mastic Prasad",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 611,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
   {
     "Officer Name": "Mr Fantom",
     "Officer Rank": "Trooper",
@@ -265,16 +285,6 @@
     "Department": "SASP",
     "Status": "Active",
     "ID": 705,
-    "Authorized Units": [],
-    "Authorized Weapons": ["SMGs"],
-    "Authorized Date": "2025-06-10"
-  },
-  {
-    "Officer Name": "Mastic Prasad",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 706,
     "Authorized Units": [],
     "Authorized Weapons": ["SMGs"],
     "Authorized Date": "2025-06-10"
