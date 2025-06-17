@@ -90,6 +90,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Jack Daniel",
+    "Officer Rank": "Corporal",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 303,
+    "Authorized Units": [],
+    "Authorized Weapons": ["LWRC M6IC"],
+    "Authorized Date": "2025-06-10"
+  },
+  {
     "Officer Name": "Atul Shrestha",
     "Officer Rank": "Senior Trooper",
     "Department": "SASP",
@@ -119,15 +129,15 @@
     "Authorized Weapons": ["Carbine Rifle"],
     "Authorized Date": "2025-05-26"
   },
-  {
-    "Officer Name": "Jack Daniel",
+   {
+    "Officer Name": "Shiva Ram",
     "Officer Rank": "Trooper 1st Class",
     "Department": "SASP",
-    "Status": "Active",
-    "ID": 501,
+    "Status": "Semi-Active",
+    "ID": 502,
     "Authorized Units": [],
-    "Authorized Weapons": ["LWRC M6IC"],
-    "Authorized Date": "2025-06-10"
+    "Authorized Weapons": [],
+    "Authorized Date": ""
   },
   {
     "Officer Name": "Sodeep Khatri",
