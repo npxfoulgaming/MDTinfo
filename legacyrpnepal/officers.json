@@ -270,6 +270,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Bibek Bhandari",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 613,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Mr Fantom",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -385,16 +395,6 @@
     "Department": "SASP",
     "Status": "Active",
     "ID": 719,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Bibek Bhandari",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 720,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
