@@ -125,7 +125,7 @@
     "Department": "SASP",
     "Status": "Active",
     "ID": 403,
-    "Authorized Units": [],
+    "Authorized Units": ["Speed"],
     "Authorized Weapons": ["Carbine Rifle"],
     "Authorized Date": "2025-05-26"
   },
@@ -295,6 +295,16 @@
     "Department": "SASP",
     "Status": "Active",
     "ID": 702,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Alpha Jig",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 703,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
