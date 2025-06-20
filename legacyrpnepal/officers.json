@@ -96,7 +96,7 @@
     "Status": "Active",
     "ID": 303,
     "Authorized Units": [],
-    "Authorized Weapons": ["LWRC M6IC"],
+    "Authorized Weapons": ["Carbine Rifle MK II"],
     "Authorized Date": "2025-06-10"
   },
   {
@@ -133,7 +133,7 @@
     "Officer Name": "Shiva Ram",
     "Officer Rank": "Trooper 1st Class",
     "Department": "SASP",
-    "Status": "Semi-Active",
+    "Status": "Active",
     "ID": 502,
     "Authorized Units": [],
     "Authorized Weapons": [],
@@ -153,7 +153,7 @@
     "Officer Name": "Ari Don",
     "Officer Rank": "Trooper",
     "Department": "SASP",
-    "Status": "Semi-Active",
+    "Status": "InActive",
     "ID": 601,
     "Authorized Units": [],
     "Authorized Weapons": [],
@@ -163,7 +163,7 @@
     "Officer Name": "Thakur Cyrus",
     "Officer Rank": "Trooper",
     "Department": "SASP",
-    "Status": "Semi-Active",
+    "Status": "InActive",
     "ID": 602,
     "Authorized Units": [],
     "Authorized Weapons": [],
@@ -173,7 +173,7 @@
     "Officer Name": "Spidey Khatra",
     "Officer Rank": "Trooper",
     "Department": "SASP",
-    "Status": "Semi-Active",
+    "Status": "Active",
     "ID": 603,
     "Authorized Units": [],
     "Authorized Weapons": [],
@@ -196,11 +196,11 @@
     "Status": "Active",
     "ID": 605,
     "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-06-21"
   },
    {
-    "Officer Name": "Tathastu Uwu",
+    "Officer Name": "Tathastuu Wuhu",
     "Officer Rank": "Trooper",
     "Department": "SASP",
     "Status": "Active",
@@ -213,7 +213,7 @@
     "Officer Name": "Phoenix Muntey",
     "Officer Rank": "Trooper",
     "Department": "SASP",
-    "Status": "Semi-Active",
+    "Status": "InActive",
     "ID": 607,
     "Authorized Units": [],
     "Authorized Weapons": [],
@@ -223,7 +223,7 @@
     "Officer Name": "Ist Arrow",
     "Officer Rank": "Trooper",
     "Department": "SASP",
-    "Status": "Active",
+    "Status": "Semi-Active",
     "ID": 608,
     "Authorized Units": ["Speed"],
     "Authorized Weapons": ["H&K 416"],
@@ -243,23 +243,23 @@
     "Officer Name": "Andy Max",
     "Officer Rank": "Trooper",
     "Department": "SASP",
-    "Status": "Active",
+    "Status": "Semi-Active",
     "ID": 610,
     "Authorized Units": [],
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-05-26"
   },
-   {
+  {
     "Officer Name": "Mastic Prasad",
     "Officer Rank": "Trooper",
     "Department": "SASP",
     "Status": "Active",
     "ID": 611,
     "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-06-21"
   },
-    {
+  {
     "Officer Name": "Jigme Lal",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -276,14 +276,14 @@
     "Status": "Active",
     "ID": 613,
     "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-06-21"
   },
   {
     "Officer Name": "Mr Fantom",
     "Officer Rank": "Trooper",
     "Department": "SASP",
-    "Status": "Active",
+    "Status": "Semi-Active",
     "ID": 614,
     "Authorized Units": [],
     "Authorized Weapons": [],
@@ -300,6 +300,16 @@
     "Authorized Date": "2025-06-10"
   },
   {
+    "Officer Name": "Raja Ram",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 616,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-06-21"
+  },
+  {
     "Officer Name": "Sarki Yaro",
     "Officer Rank": "Cadet",
     "Department": "SASP",
@@ -313,14 +323,14 @@
     "Officer Name": "Dr Shrestha",
     "Officer Rank": "Cadet",
     "Department": "SASP",
-    "Status": "Active",
+    "Status": "Semi-Active",
     "ID": 702,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Alpha Jig",
+    "Officer Name": "Jig Alpha",
     "Officer Rank": "Cadet",
     "Department": "SASP",
     "Status": "Active",
@@ -363,7 +373,7 @@
     "Officer Name": "Mr Kalo Aringal",
     "Officer Rank": "Cadet",
     "Department": "SASP",
-    "Status": "Active",
+    "Status": "Semi-Active",
     "ID": 713,
     "Authorized Units": [],
     "Authorized Weapons": [],
@@ -390,20 +400,10 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Raja Ram",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 719,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Tich Kule",
     "Officer Rank": "Cadet",
     "Department": "SASP",
-    "Status": "Active",
+    "Status": "Semi-Active",
     "ID": 723,
     "Authorized Units": [],
     "Authorized Weapons": [],
