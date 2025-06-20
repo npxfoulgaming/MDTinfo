@@ -290,6 +290,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Bibek Shrestha",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 615,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-06-10"
+  },
+  {
     "Officer Name": "Sarki Yaro",
     "Officer Rank": "Cadet",
     "Department": "SASP",
@@ -325,16 +335,6 @@
     "Department": "SASP",
     "Status": "Active",
     "ID": 705,
-    "Authorized Units": [],
-    "Authorized Weapons": ["SMGs"],
-    "Authorized Date": "2025-06-10"
-  },
-  {
-    "Officer Name": "Bibek Shrestha",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 707,
     "Authorized Units": [],
     "Authorized Weapons": ["SMGs"],
     "Authorized Date": "2025-06-10"
