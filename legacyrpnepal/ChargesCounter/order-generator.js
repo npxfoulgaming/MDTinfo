@@ -453,6 +453,19 @@ function formatItems(items) {
 }
 
 function add(item) {
+	const elem = document.getElementById(`${item}-#`);
+	if (!elem) return alert(`ERROR: ${item} is not available to add to the cart!`);
+	let number = Number(elem.innerText);
+	if (number > 0) {
+		elem.innerText = 0;
+	} else {
+		let max = Menu[item].max || Settings.DEFAULT_MAX_CAP;
+		elem.innerText = Math.min(1, max); // only allow adding one
+	}
+	report();
+}
+
+/*function add(item) {
 	let elem = document.getElementById(`${item}-#`);
 	if (!elem) return alert(`ERROR: ${item} is not available to add to the cart!`);
 	let number = Number(elem.innerText);
@@ -464,6 +477,7 @@ function add(item) {
 		alert(`You cannot add more than ${max}x ${item} in 1 order!`);
 	}
 }
+*/
 
 function remove(item) {
 	let elem = document.getElementById(`${item}-#`);
