@@ -340,6 +340,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Jessie Pinkman",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 704,
+    "Authorized Units": [],
+    "Authorized Weapons": [""],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Maskey Dawg",
     "Officer Rank": "Cadet",
     "Department": "SASP",
