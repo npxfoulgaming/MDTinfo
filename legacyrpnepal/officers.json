@@ -150,6 +150,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Jimmy Sherr",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 601,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Thakur Cyrus",
     "Officer Rank": "Trooper",
     "Department": "SASP",
