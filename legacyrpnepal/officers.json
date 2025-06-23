@@ -150,16 +150,6 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Ari Don",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "InActive",
-    "ID": 601,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Thakur Cyrus",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -220,16 +210,6 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Ist Arrow",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 608,
-    "Authorized Units": ["Speed"],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-05-26"
-  },
-  {
     "Officer Name": "Ethan Hunt",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -250,26 +230,6 @@
     "Authorized Date": "2025-05-26"
   },
   {
-    "Officer Name": "Mastic Prasad",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 611,
-    "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-06-21"
-  },
-  {
-    "Officer Name": "Jigme Lal",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 612,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Bibek Bhandari",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -278,16 +238,6 @@
     "Authorized Units": [],
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-06-21"
-  },
-  {
-    "Officer Name": "Mr Fantom",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 614,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
   },
   {
     "Officer Name": "Bibek Shrestha",
@@ -308,26 +258,6 @@
     "Authorized Units": [],
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-06-21"
-  },
-  {
-    "Officer Name": "Sarki Yaro",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "InActive",
-    "ID": 701,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Dr Shrestha",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 702,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
   },
   {
     "Officer Name": "Jig Alpha",
@@ -375,46 +305,6 @@
     "Department": "SASP",
     "Status": "InActive",
     "ID": 711,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Mr Kalo Aringal",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 713,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Kagami Horw",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "InActive",
-    "ID": 714,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Khamu Yadav",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "InActive",
-    "ID": 715,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Tich Kule",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 723,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
