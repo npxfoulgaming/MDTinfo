@@ -12,7 +12,17 @@
   {
     "ID": "210",
     "Officer Name": "Dr Rudolf",
-    "Officer Rank": "Senior Specialist",
+    "Officer Rank": "Sergeant",
+    "Department": "EMS",
+    "Status": "Active",
+    "Authorized Date": "",
+    "Authorized Weapons": [],
+    "Authorized Units": ["Air"]
+  },
+  {
+    "ID": "211",
+    "Officer Name": "Dr Jhadka",
+    "Officer Rank": "Sergeant",
     "Department": "EMS",
     "Status": "Active",
     "Authorized Date": "",
@@ -49,16 +59,6 @@
     "Authorized Weapons": [],
     "Authorized Units": []
   },
-    {
-    "ID": "503",
-    "Officer Name": "Walter White",
-    "Officer Rank": "Paramedic",
-    "Department": "EMS",
-    "Status": "Active",
-    "Authorized Date": "",
-    "Authorized Weapons": [],
-    "Authorized Units": []
-  },
   {
     "ID": "504",
     "Officer Name": "Winter Soldier",
@@ -71,7 +71,7 @@
   },
   {
     "ID": "505",
-    "Officer Name": "Dr Jhadka",
+    "Officer Name": "Walter White",
     "Officer Rank": "Paramedic",
     "Department": "EMS",
     "Status": "Active",
@@ -115,6 +115,17 @@
     "Officer Rank": "EMT",
     "Department": "EMS",
     "Status": "InActive",
+    "Authorized Date": "",
+    "Authorized Weapons": [],
+    "Authorized Units": []
+    
+  },
+  {
+    "ID": "654",
+    "Officer Name": "Dhani Ram",
+    "Officer Rank": "EMT",
+    "Department": "EMS",
+    "Status": "Active",
     "Authorized Date": "",
     "Authorized Weapons": [],
     "Authorized Units": []
