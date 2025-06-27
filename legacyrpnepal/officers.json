@@ -340,6 +340,26 @@
     "Authorized Date": "2025-06-10"
   },
   {
+    "Officer Name": "Meera Patel",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 706,
+    "Authorized Units": [],
+    "Authorized Weapons": [""],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Cesar Baldacci",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 707,
+    "Authorized Units": [],
+    "Authorized Weapons": [""],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Harry Miller",
     "Officer Rank": "Cadet",
     "Department": "SASP",
