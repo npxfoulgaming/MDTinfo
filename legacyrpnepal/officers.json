@@ -220,6 +220,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Bojack Horseman",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 608,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Ethan Hunt",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -238,6 +248,16 @@
     "Authorized Units": [],
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-05-26"
+  },
+  {
+    "Officer Name": "Harry San",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Semi-Active",
+    "ID": 611,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
   },
   {
     "Officer Name": "Bibek Bhandari",
@@ -268,6 +288,26 @@
     "Authorized Units": [],
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-06-21"
+  },
+  {
+    "Officer Name": " Bermunda Munda",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 701,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Rooks Dai",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 702,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
   },
   {
     "Officer Name": "Jig Alpha",
