@@ -270,6 +270,16 @@
     "Authorized Date": "2025-06-21"
   },
   {
+    "Officer Name": "Maskey Dawg",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 614,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-06-28"
+  },
+  {
     "Officer Name": "Bibek Shrestha",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -328,16 +338,6 @@
     "Authorized Units": [],
     "Authorized Weapons": [""],
     "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Maskey Dawg",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 705,
-    "Authorized Units": [],
-    "Authorized Weapons": ["SMGs"],
-    "Authorized Date": "2025-06-10"
   },
   {
     "Officer Name": "Meera Patel",
