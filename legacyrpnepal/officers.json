@@ -259,6 +259,16 @@
     "Authorized Weapons": [],
     "Authorized Date": ""
   },
+    {
+    "Officer Name": "Mastic Prasad",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 612,
+    "Authorized Units": [],
+    "Authorized Weapons": ["H&K 416"],
+    "Authorized Date": "2025-05-26"
+  },
   {
     "Officer Name": "Bibek Bhandari",
     "Officer Rank": "Trooper",
