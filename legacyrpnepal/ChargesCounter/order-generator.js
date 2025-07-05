@@ -14,46 +14,46 @@ const Menu = {
 	"Basic Robbery:": {
 		header: true,
 	},
-    "Armed Robbery of a Shop": {
+    "Armed Robbery of Store": {
 		noIcon: true,
-		price: 1500,
+		price: 1000,
 		items: [
-			...rep("Steel", 40),
+			...rep("Steel", 10),
 		],
 	},
     "Armed Robbery of a Bank": {
 		noIcon: true,
-		price: 3200,
+		price: 2000,
 		items: [
-			...rep("Steel", 90),
+			...rep("Steel", 20),
 		],
 	},
     "Armed Robbery of a Jewelry Store": {
 		noIcon: true,
-		price: 5000,
+		price: 3000,
 		items: [
-			...rep("Aluminium", 150),
+			...rep("Aluminium", 30),
 		],
 	},
     "Kidnapping": {
 		noIcon: true,
-		price: 1200,
+		price: 500,
 		items: [
-			...rep("Aluminium", 70),
+			...rep("Aluminium", 5),
 		],
 	},
     "Evading a Police Officer": {
 		noIcon: true,
-		price: 350,
+		price: 200,
 		items: [
-			...rep("Steel", 15),
+			...rep("Steel", 5),
 		],
 	},
     "Felony Evading a Police Officer": {
 		noIcon: true,
-		price: 700,
+		price: 250,
 		items: [
-			...rep("Steel", 30),
+			...rep("Steel", 5),
 		],
 	},
 
@@ -62,72 +62,72 @@ const Menu = {
 	},
 	"Possession of Unregistered Weapon": {
 		noIcon: true,
-		price: 500,
+		price: 300,
 		items: [
 			...rep("Aluminium", 10),
 		],
 	},
     "Possession of Class 2 Weapon": {
 		noIcon: true,
-		price: 600,
+		price: 400,
 		items: [
-			...rep("Aluminium", 30),
+			...rep("Aluminium", 15),
 		],
 	},
     "Possession of Class 3 Weapon": {
 		noIcon: true,
-		price: 1000,
-		items: [
-			...rep("Aluminium", 50),
-		],
-	},
-	"Carrying a Firearm Without a License": {
-		noIcon: true,
-		price: 400,
+		price: 800,
 		items: [
 			...rep("Aluminium", 25),
 		],
 	},
+	"Carrying a Firearm Without a License": {
+		noIcon: true,
+		price: 200,
+		items: [
+			...rep("Aluminium", 5),
+		],
+	},
 	"Brandishing a Weapon": {
 		noIcon: true,
-		price: 350,
+		price: 200,
 		items: [
-			...rep("Aluminium", 20),
+			...rep("Aluminium", 5),
 		],
 	},
 	"Weapons Discharge Violation": {
 		noIcon: true,
 		price: 200,
 		items: [
-			...rep("Aluminium", 10),
+			...rep("Aluminium", 5),
 		],
 	},
 	"Felony Weapons Discharge Violation": {
 		noIcon: true,
-		price: 400,
+		price: 200,
 		items: [
-			...rep("Aluminium", 20),
+			...rep("Aluminium", 5),
 		],
 	},
 	"Trafficking of Class 1 Weapon": {
 		noIcon: true,
-		price: 5000,
+		price: 2500,
 		items: [
-			...rep("Aluminium", 100),
+			...rep("Aluminium", 20),
 		],
 	},
 	"Trafficking of Class 2 Weapon": {
 		noIcon: true,
-		price: 7000,
+		price: 3000,
 		items: [
-			...rep("Aluminium", 150),
+			...rep("Aluminium", 30),
 		],
 	},
 	"Trafficking of Class 3 Weapon": {
 		noIcon: true,
-		price: 10000,
+		price: 4000,
 		items: [
-			...rep("Aluminium", 200),
+			...rep("Aluminium", 40),
 		],
 	},
 
@@ -138,42 +138,42 @@ const Menu = {
 		noIcon: true,
 		price: 1000,
 		items: [
-			...rep("Aluminium", 40),
+			...rep("Aluminium", 10),
 		],
 	},
 	"Aggravated Assault and Battery": {
 		noIcon: true,
-		price: 1200,
+		price: 1000,
 		items: [
-			...rep("Aluminium", 60),
+			...rep("Aluminium", 10),
 		],
 	},
 	"Attempted Murder": {
 		noIcon: true,
-		price: 2500,
+		price: 800,
 		items: [
-			...rep("Aluminium", 120),
+			...rep("Aluminium", 10),
 		],
 	},
 	"Assault and Battery (PP)": {
 		noIcon: true,
-		price: 1150,
+		price: 1000,
 		items: [
-			...rep("Aluminium", 46),
+			...rep("Aluminium", 10),
 		],
 	},
 	"Aggravated Assault and Battery (PP)": {
 		noIcon: true,
-		price: 1380,
+		price: 1000,
 		items: [
-			...rep("Aluminium", 69),
+			...rep("Aluminium", 10),
 		],
 	},
 	"Attempted Murder (PP)": {
 		noIcon: true,
-		price: 2875,
+		price: 800,
 		items: [
-			...rep("Aluminium", 138),
+			...rep("Aluminium", 10),
 		],
 	},
 
@@ -191,37 +191,37 @@ const Menu = {
 	},
     "Armed Robbery": {
 		noIcon: true,
-		price: 1500,
+		price: 800,
 		items: [
-			...rep("Aluminium", 70),
+			...rep("Aluminium", 5),
 		],
 	},
-	"Armed Robbery of a Shop": {
+	"Armed Robbery of Store": {
 		noIcon: true,
-		price: 1500,
+		price: 1000,
 		items: [
-			...rep("Steel", 40),
+			...rep("Steel", 10),
 		],
 	},
 	"Armed Robbery of a Bank": {
 		noIcon: true,
-		price: 3200,
+		price: 2000,
 		items: [
-			...rep("Steel", 90),
+			...rep("Steel", 20),
 		],
 	},
     "Armed Robbery of a Jewelry Store": {
 		noIcon: true,
-		price: 5000,
+		price: 3000,
 		items: [
-			...rep("Aluminium", 150),
+			...rep("Aluminium", 30),
 		],
 	},
     "Armed Robbery of a Stockade": {
 		noIcon: true,
-		price: 4100,
+		price: 3000,
 		items: [
-			...rep("Aluminium", 120),
+			...rep("Aluminium", 30),
 		],
 	},
 
@@ -230,28 +230,28 @@ const Menu = {
 	},
 	"Criminal Threats": {
 		noIcon: true,
-		price: 500,
+		price: 250,
 		items: [
-			...rep("Aluminium", 15),
+			...rep("Aluminium", 5),
 		],
 	},
     "Criminal Threats (PP)": {
 		noIcon: true,
-		price: 600,
+		price: 300,
 		items: [
-			...rep("Aluminium", 18),
+			...rep("Aluminium", 10),
 		],
 	},
 	"Display of Tactital Gear": {
 		noIcon: true,
-		price: 200,
+		price: 100,
 		items: [
 			...rep("Aluminium", 5),
 		],
 	},
     "Verbal Harassment": {
 		noIcon: true,
-		price: 300,
+		price: 150,
 		items: [
 			...rep("Aluminium", 10),
 		],
@@ -260,7 +260,7 @@ const Menu = {
 		noIcon: true,
 		price: 500,
 		items: [
-			...rep("Aluminium", 25),
+			...rep("Aluminium", 15),
 		],
 	},
     "Disregarding a Lawful Command": {
@@ -286,9 +286,9 @@ const Menu = {
 	},
 	"Possession of Silencers": {
 		noIcon: true,
-		price: 1500,
+		price: 500,
 		items: [
-			...rep("Aluminium", 30),
+			...rep("Aluminium", 10),
 		],
 	},
 
@@ -300,21 +300,21 @@ const Menu = {
 		noIcon: true,
 		price: 500,
 		items: [
-			...rep("Aluminium", 10),
+			...rep("Aluminium", 5),
 		],
 	},
     "Intention to Sell a Class A Substance": {
 		noIcon: true,
-		price: 2200,
+		price: 1500,
 		items: [
-			...rep("Aluminium", 50),
+			...rep("Aluminium", 10),
 		],
 	},
     "Drug Trafficking a Class A Substance": {
 		noIcon: true,
-		price: 4000,
+		price: 3000,
 		items: [
-			...rep("Aluminium", 70),
+			...rep("Aluminium", 15),
 		],
 	},
     "Possession of a Class B Substance": {
@@ -326,30 +326,30 @@ const Menu = {
 	},
 	"Intention to Sell a Class B Substance": {
 		noIcon: true,
-		price: 1400,
+		price: 1000,
 		items: [
-			...rep("Aluminium", 30),
+			...rep("Aluminium", 10),
 		],
 	},
     "Drug Trafficking a Class B Substance": {
 		noIcon: true,
-		price: 2000,
+		price: 1500,
 		items: [
-			...rep("Aluminium", 50),
+			...rep("Aluminium", 15),
 		],
 	},
     "Maintaining a Place for Distribution": {
 		noIcon: true,
-		price: 1200,
+		price: 500,
 		items: [
-			...rep("Aluminium", 45),
+			...rep("Aluminium", 10),
 		],
 	},
     "Sale of a Controlled Substance": {
 		noIcon: true,
-		price: 400,
+		price: 200,
 		items: [
-			...rep("Aluminium", 20),
+			...rep("Aluminium", 10),
 		],
 	},
 
@@ -358,30 +358,30 @@ const Menu = {
 	},
     "Driving without a License": {
 		noIcon: true,
-		price: 300,
+		price: 200,
 		items: [
 			...rep("Aluminium", 0),
 		],
 	},
     "Speeding": {
 		noIcon: true,
-		price: 300,
+		price: 150,
 		items: [
 			...rep("Aluminium", 0),
 		],
 	},
     "Speeding (+30mph)": {
 		noIcon: true,
-		price: 600,
+		price: 400,
 		items: [
-			...rep("Aluminium", 30),
+			...rep("Aluminium", 5),
 		],
 	},
     "Hit and Run": {
 		noIcon: true,
-		price: 750,
+		price: 800,
 		items: [
-			...rep("Aluminium", 25),
+			...rep("Aluminium", 10),
 		],
 	},
     "Traffic / Parking Violation": {
