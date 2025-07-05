@@ -16,23 +16,23 @@ const Menu = {
 	},
     "Armed Robbery of Store": {
 		noIcon: true,
-		price: 1000,
+		price: 500,
 		items: [
-			...rep("Steel", 10),
+			...rep("Steel", 5),
 		],
 	},
     "Armed Robbery of a Bank": {
 		noIcon: true,
-		price: 2000,
+		price: 1000,
 		items: [
-			...rep("Steel", 20),
+			...rep("Steel", 8),
 		],
 	},
     "Armed Robbery of a Jewelry Store": {
 		noIcon: true,
-		price: 3000,
+		price: 2000,
 		items: [
-			...rep("Aluminium", 30),
+			...rep("Aluminium", 10),
 		],
 	},
     "Kidnapping": {
