@@ -236,8 +236,8 @@
     "Status": "Semi-Active",
     "ID": 610,
     "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-05-26"
+    "Authorized Weapons": [],
+    "Authorized Date": ""
   },
   {
     "Officer Name": "Harry San",
