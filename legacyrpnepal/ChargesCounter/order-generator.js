@@ -25,14 +25,14 @@ const Menu = {
 		noIcon: true,
 		price: 1000,
 		items: [
-			...rep("Steel", 8),
+			...rep("Steel", 5),
 		],
 	},
     "Armed Robbery of a Jewelry Store": {
 		noIcon: true,
 		price: 2000,
 		items: [
-			...rep("Aluminium", 10),
+			...rep("Aluminium", 5),
 		],
 	},
     "Kidnapping": {
