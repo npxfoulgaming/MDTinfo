@@ -19,6 +19,16 @@
     "Authorized Weapons": ["Special Carbine Rifle MK II", "All ShotGuns"],
     "Authorized Date": "2025-06-14"
   },
+  
+    "Officer Name": "Eren Yeager",
+    "Officer Rank": "Captain",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 110,
+    "Authorized Units": ["Speed", "Bike", "Air"],
+    "Authorized Weapons": ["Special Carbine Rifle MK II", "All ShotGuns"],
+    "Authorized Date": "2025-07-09"
+  },
   {
     "Officer Name": "Sourabh Rathore",
     "Officer Rank": "Lieutenant",
