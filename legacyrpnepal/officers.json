@@ -19,7 +19,7 @@
     "Authorized Weapons": ["Special Carbine Rifle MK II", "All ShotGuns"],
     "Authorized Date": "2025-06-14"
   },
-  
+  {
     "Officer Name": "Eren Yeager",
     "Officer Rank": "Captain",
     "Department": "SASP",
@@ -139,7 +139,7 @@
     "Authorized Weapons": ["Carbine Rifle"],
     "Authorized Date": "2025-05-26"
   },
-   {
+  {
     "Officer Name": "Shiva Ram",
     "Officer Rank": "Trooper 1st Class",
     "Department": "SASP",
@@ -199,7 +199,7 @@
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-06-21"
   },
-   {
+  {
     "Officer Name": "Tathastuu Wuhu",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -259,7 +259,7 @@
     "Authorized Weapons": [],
     "Authorized Date": ""
   },
-    {
+  {
     "Officer Name": "Mastic Prasad",
     "Officer Rank": "Trooper",
     "Department": "SASP",

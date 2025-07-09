@@ -328,28 +328,28 @@ const Menu = {
 		noIcon: true,
 		price: 1000,
 		items: [
-			...rep("Aluminium", 10),
+			...rep("Aluminium", 2),
 		],
 	},
     "Drug Trafficking a Class B Substance": {
 		noIcon: true,
 		price: 1500,
 		items: [
-			...rep("Aluminium", 15),
+			...rep("Aluminium", 2),
 		],
 	},
     "Maintaining a Place for Distribution": {
 		noIcon: true,
 		price: 500,
 		items: [
-			...rep("Aluminium", 10),
+			...rep("Aluminium", 2),
 		],
 	},
     "Sale of a Controlled Substance": {
 		noIcon: true,
 		price: 200,
 		items: [
-			...rep("Aluminium", 10),
+			...rep("Aluminium", 2),
 		],
 	},
 
@@ -374,14 +374,14 @@ const Menu = {
 		noIcon: true,
 		price: 400,
 		items: [
-			...rep("Aluminium", 5),
+			...rep("Aluminium", 2),
 		],
 	},
     "Hit and Run": {
 		noIcon: true,
 		price: 800,
 		items: [
-			...rep("Aluminium", 10),
+			...rep("Aluminium", 2),
 		],
 	},
     "Traffic / Parking Violation": {
