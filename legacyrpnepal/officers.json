@@ -140,16 +140,6 @@
     "Authorized Date": "2025-05-26"
   },
   {
-    "Officer Name": "Shiva Ram",
-    "Officer Rank": "Trooper 1st Class",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 502,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Sodeep Khatri",
     "Officer Rank": "Trooper 1st Class",
     "Department": "SASP",
@@ -170,16 +160,6 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Thakur Cyrus",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "InActive",
-    "ID": 602,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Srijal Bahadur",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -188,16 +168,6 @@
     "Authorized Units": [],
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-06-10"
-  },
-  {
-    "Officer Name": "Rex White",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 605,
-    "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-06-21"
   },
   {
     "Officer Name": "Tathastuu Wuhu",
@@ -238,16 +208,6 @@
     "Authorized Units": [],
     "Authorized Weapons": ["H&K 416"],
     "Authorized Date": "2025-05-26"
-  },
-  {
-    "Officer Name": "Andy Max",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 610,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
   },
   {
     "Officer Name": "Harry San",
@@ -300,16 +260,6 @@
     "Authorized Date": "2025-06-10"
   },
   {
-    "Officer Name": "Raja Ram",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 616,
-    "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-06-21"
-  },
-  {
     "Officer Name": "Bermunda Munda",
     "Officer Rank": "Cadet",
     "Department": "SASP",
@@ -330,26 +280,6 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Jig Alpha",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 703,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Jessie Pinkman",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 704,
-    "Authorized Units": [],
-    "Authorized Weapons": [""],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Meera Patel",
     "Officer Rank": "Cadet",
     "Department": "SASP",
@@ -367,16 +297,6 @@
     "ID": 707,
     "Authorized Units": [],
     "Authorized Weapons": [""],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Harry Miller",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 708,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
     "Authorized Date": ""
   },
   {
