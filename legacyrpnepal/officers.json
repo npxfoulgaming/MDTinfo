@@ -230,16 +230,6 @@
     "Authorized Date": "2025-05-26"
   },
   {
-    "Officer Name": "Bibek Bhandari",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 613,
-    "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-06-21"
-  },
-  {
     "Officer Name": "Maskey Dawg",
     "Officer Rank": "Trooper",
     "Department": "SASP",
