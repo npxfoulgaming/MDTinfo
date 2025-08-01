@@ -160,6 +160,26 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Samir Ghimire",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 602,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Bibek Bhandari",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 603,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Srijal Bahadur",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -270,6 +290,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Ma Trix",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 703,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Meera Patel",
     "Officer Rank": "Cadet",
     "Department": "SASP",
@@ -293,7 +323,7 @@
     "Officer Name": "Rowdy Rathore",
     "Officer Rank": "Cadet",
     "Department": "SASP",
-    "Status": "InActive",
+    "Status": "Semi-Active",
     "ID": 711,
     "Authorized Units": [],
     "Authorized Weapons": [],
