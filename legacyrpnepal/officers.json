@@ -340,6 +340,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "Jawahar Khan",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 708,
+    "Authorized Units": [],
+    "Authorized Weapons": [""],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Rowdy Rathore",
     "Officer Rank": "Cadet",
     "Department": "SASP",
