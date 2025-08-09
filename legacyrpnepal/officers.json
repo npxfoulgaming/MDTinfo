@@ -360,6 +360,16 @@
     "Authorized Date": ""
   },
   {
+    "Officer Name": "John Dai",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 709,
+    "Authorized Units": [],
+    "Authorized Weapons": [""],
+    "Authorized Date": ""
+  },
+  {
     "Officer Name": "Rowdy Rathore",
     "Officer Rank": "Cadet",
     "Department": "SASP",
