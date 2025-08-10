@@ -388,5 +388,15 @@
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
+  },
+  {
+    "Officer Name": "John Smith",
+    "Officer Rank": "Cadet",
+    "Department": "SASP",
+    "Status": "Semi-Active",
+    "ID": 712,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
   }
   ]
