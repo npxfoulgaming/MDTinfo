@@ -150,7 +150,37 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Jimmy Sherr",
+    "Officer Name": "Maskey Dawg",
+    "Officer Rank": "Trooper 1st Class",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 501,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Samir Ghimire",
+    "Officer Rank": "Trooper 1st Class",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 502,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Tathastuu Wuhu",
+    "Officer Rank": "Trooper 1st Class",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 503,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "Ma Trix",
     "Officer Rank": "Trooper",
     "Department": "SASP",
     "Status": "Active",
@@ -160,7 +190,7 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Samir Ghimire",
+    "Officer Name": "Dhunga Boss",
     "Officer Rank": "Trooper",
     "Department": "SASP",
     "Status": "Active",
@@ -186,8 +216,8 @@
     "Status": "Active",
     "ID": 604,
     "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-06-10"
+    "Authorized Weapons": [],
+    "Authorized Date": ""
   },
   {
     "Officer Name": "Rana Jee",
@@ -200,11 +230,11 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Tathastuu Wuhu",
-    "Officer Rank": "Trooper",
+    "Officer Name": "Ace Black",
+    "Officer Rank": "Cadet",
     "Department": "SASP",
-    "Status": "Active",
-    "ID": 606,
+    "Status": "Semi-Active",
+    "ID": 710,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
@@ -236,8 +266,18 @@
     "Status": "Active",
     "ID": 609,
     "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-05-26"
+    "Authorized Weapons": [],
+    "Authorized Date": ""
+  },
+  {
+    "Officer Name": "John Dai",
+    "Officer Rank": "Trooper",
+    "Department": "SASP",
+    "Status": "Active",
+    "ID": 610,
+    "Authorized Units": [],
+    "Authorized Weapons": [],
+    "Authorized Date": ""
   },
   {
     "Officer Name": "Harry San",
@@ -260,16 +300,6 @@
     "Authorized Date": "2025-05-26"
   },
   {
-    "Officer Name": "Maskey Dawg",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 614,
-    "Authorized Units": [],
-    "Authorized Weapons": ["H&K 416"],
-    "Authorized Date": "2025-06-28"
-  },
-  {
     "Officer Name": "Bibek Shrestha",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -290,41 +320,11 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Rooks Dai",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 702,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Ma Trix",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 703,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Shadow Monarch",
     "Officer Rank": "Cadet",
     "Department": "SASP",
     "Status": "Active",
     "ID": 704,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Dhunga Boss",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 705,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
@@ -357,26 +357,6 @@
     "ID": 708,
     "Authorized Units": [],
     "Authorized Weapons": [""],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "John Dai",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 709,
-    "Authorized Units": [],
-    "Authorized Weapons": [""],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Ace Black",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 710,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
     "Authorized Date": ""
   },
   {
