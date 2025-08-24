@@ -126,3 +126,33 @@ function copy() {
 		console.log("Copy error: " + e);
 	}
 }
+
+let usersData = [];
+
+// Adjust this URL depending on how your web server serves the directory
+fetch("/legacyrpnepal/usersdata.json")
+  .then(response => response.json())
+  .then(data => {
+    usersData = data;
+  })
+  .catch(err => console.error("Error loading usersdata.json:", err));
+
+document.getElementById("vehicleplate").addEventListener("input", function() {
+  const plate = this.value.trim().toUpperCase();
+  let found = null;
+
+  for (const user of usersData) {
+    for (const vehicle of user.vehicles) {
+      if (vehicle.plate.toUpperCase() === plate) {
+        found = { label: vehicle.label, owner: user.fullName };
+        break;
+      }
+    }
+    if (found) break;
+  }
+
+  if (found) {
+    document.getElementById("vehicledesc").value = found.label;
+    document.getElementById("vehiclereg").value = found.owner;
+  }
+});

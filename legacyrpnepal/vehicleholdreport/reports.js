@@ -232,3 +232,43 @@ fetch('../officers.json')
     });
   })
   .catch(error => console.error("Error loading officers:", error));
+
+  let usersData = [];
+
+// Fetch the JSON file from your server (adjust path if needed)
+fetch("/legacyrpnepal/usersdata.json")
+  .then(response => response.json())
+  .then(data => {
+    usersData = data;
+  })
+  .catch(err => console.error("Error loading usersdata.json:", err));
+
+document.getElementById("plate").addEventListener("input", function() {
+  const plate = this.value.trim().toUpperCase();
+  let found = null;
+
+  // Search in JSON data
+  for (const user of usersData) {
+    for (const vehicle of user.vehicles) {
+      if (vehicle.plate.toUpperCase() === plate) {
+        found = { 
+          owner: user.fullName, 
+          label: vehicle.label,
+          model: vehicle.model,
+          vin: vehicle.vin || "",   // if VIN exists in your JSON
+          color: vehicle.color || "" // if Color exists in your JSON
+        };
+        break;
+      }
+    }
+    if (found) break;
+  }
+
+  // Auto-fill fields if found
+  if (found) {
+    document.getElementById("owner").value = found.owner;
+    document.getElementById("vehiclename").value = found.label;
+    document.getElementById("vin").value = found.vin;
+    document.getElementById("vehiclecolor").value = found.color;
+  }
+});
