@@ -510,10 +510,10 @@ fetch('../officers.json')
   })
   .catch(error => console.error("Error loading officers:", error));
 
-  let usersData = [];
+let usersData = [];
 
 // Adjust this URL depending on how your web server serves the directory
-fetch("/legacyrpnepal/usersdata.json")
+fetch("../usersdata.json")
   .then(response => response.json())
   .then(data => {
     usersData = data;
