@@ -236,7 +236,7 @@ fetch('../officers.json')
   let usersData = [];
 
 // Fetch the JSON file from your server (adjust path if needed)
-fetch("/legacyrpnepal/usersdata.json")
+fetch("../usersdata.json")
   .then(response => response.json())
   .then(data => {
     usersData = data;
