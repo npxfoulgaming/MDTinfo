@@ -20,51 +20,11 @@
     "Authorized Date": "2025-06-14"
   },
   {
-    "Officer Name": "Eren Yeager",
-    "Officer Rank": "Captain",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 110,
-    "Authorized Units": ["Speed", "Bike", "Air"],
-    "Authorized Weapons": ["Special Carbine Rifle MK II", "All ShotGuns"],
-    "Authorized Date": "2025-07-09"
-  },
-  {
     "Officer Name": "Sourabh Rathore",
     "Officer Rank": "Lieutenant",
     "Department": "SASP",
     "Status": "Active",
     "ID": 120,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Black Theeng",
-    "Officer Rank": "Lieutenant",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 120,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Raj Shinde",
-    "Officer Rank": "Sergeant 1st Class",
-    "Department": "SASP",
-    "Status": "InActive",
-    "ID": 201,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Raven Hora",
-    "Officer Rank": "Sergeant",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 220,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
@@ -90,16 +50,6 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Heisenberg Nepali",
-    "Officer Rank": "Corporal",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 302,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Jack Daniel",
     "Officer Rank": "Corporal",
     "Department": "SASP",
@@ -115,26 +65,6 @@
     "Department": "SASP",
     "Status": "Active",
     "ID": 401,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Krisne Parsad",
-    "Officer Rank": "Senior Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 402,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Menace Lama",
-    "Officer Rank": "Senior Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 403,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
@@ -200,26 +130,6 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Bibek Bhandari",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 603,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Srijal Bahadur",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 604,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Rana Jee",
     "Officer Rank": "Trooper",
     "Department": "SASP",
@@ -235,26 +145,6 @@
     "Department": "SASP",
     "Status": "Semi-Active",
     "ID": 710,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Phoenix Muntey",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "InActive",
-    "ID": 607,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Bojack Horseman",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 608,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
@@ -280,41 +170,11 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Harry San",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 611,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Mastic Prasad",
-    "Officer Rank": "Trooper",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 612,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Bibek Shrestha",
     "Officer Rank": "Trooper",
     "Department": "SASP",
     "Status": "Active",
     "ID": 615,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Bermunda Munda",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 701,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
@@ -350,41 +210,11 @@
     "Authorized Date": ""
   },
   {
-    "Officer Name": "Meera Patel",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 706,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "Jawahar Khan",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Active",
-    "ID": 708,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
     "Officer Name": "Rowdy Rathore",
     "Officer Rank": "Cadet",
     "Department": "SASP",
     "Status": "Semi-Active",
     "ID": 711,
-    "Authorized Units": [],
-    "Authorized Weapons": [],
-    "Authorized Date": ""
-  },
-  {
-    "Officer Name": "John Smith",
-    "Officer Rank": "Cadet",
-    "Department": "SASP",
-    "Status": "Semi-Active",
-    "ID": 712,
     "Authorized Units": [],
     "Authorized Weapons": [],
     "Authorized Date": ""
