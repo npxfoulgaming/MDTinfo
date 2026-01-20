@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="https://i.ibb.co/cKzzV9Pq/EMS.png"/> <!-- Change to EMS logo -->
+  <title>San Andreas EMS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #121212;
+      border-right: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar a {
+      padding: 14px 20px;
+      color: #bbb;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    /* Disable hover for non-active links */
+    .sidebar a:not(.active):hover {
+      background-color: inherit;
+      color: #bbb;
+      border-left: 3px solid transparent;
+      cursor: default;
+    }
+
+    /* Active link styling */
+    .sidebar a.active {
+      background-color: #2a2a2a;
+      color: #fff;
+      font-weight: bold;
+      border-left: 3px solid #3f8efc;
+    }
+
+    /* Hover effect only on active link */
+    .sidebar a.active:hover {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    .main {
+      flex-grow: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .roster-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .roster-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .roster-box {
+      background-color: #111;
+      border: 1px solid #444;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: #000;
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    tbody {
+      display: block;
+      max-height: calc(40px * 13); /* show 12 rows */
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    tbody tr {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      font-size: 15px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #2e2e2e;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #3a3a3a;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+
+    /* Dot base */
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Status: Active */
+    .status.active {
+      background-color: #004d00;
+      color: #00ff00;
+    }
+    .status-dot.active {
+      background-color: #00ff00;
+      box-shadow: 0 0 6px #00ff00;
+    }
+
+    /* Status: Semi-Active */
+    .status.semi-active {
+      background-color: #4d2e00;
+      color: orange;
+    }
+    .status-dot.semi-active {
+      background-color: orange;
+      box-shadow: 0 0 6px orange;
+    }
+
+    /* Status: Inactive */
+    .status.inactive {
+      background-color: #4d0000;
+      color: red;
+    }
+    .status-dot.inactive {
+      background-color: red;
+      box-shadow: 0 0 6px red;
+    }
+
+    /* Status: LOA */
+    .status.loa {
+      background-color: #2e003e;
+      color: #b266ff;
+    }
+    .status-dot.loa {
+      background-color: #b266ff;
+      box-shadow: 0 0 6px #b266ff;
+    }
+
+    /* Status: Suspended */
+    .status.suspended {
+      background-color: #1a1a1a;
+      color: #ccc;
+    }
+    .status-dot.suspended {
+      background-color: #ccc;
+      box-shadow: 0 0 6px #ccc;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div style="text-align: center; padding-bottom: 20px;">
+      <img src="ems.png" alt="Public EMS Roster"
+        style="width: 80px; height: 80px; border-radius: 50%;
+              border: 2px solid #3f8efc; margin-bottom: 10px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
+      <div style="color: #fff; font-weight: bold;">Public EMS Roster</div>
+    </div>
+    <a href="roster.html" class="active">
+      <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+      EMS Roster
+    </a>
+    <a href="authorized.html">
+      <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+      Authorized Units
+    </a>
+  </div>
+
+  <div class="main">
+    <div class="roster-container">
+      <div class="roster-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div class="roster-title">Public EMS Roster</div>
+        <div class="department-counts" style="display: flex; gap: 20px; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <img src="ems.png" alt="EMS" style="width: 24px; height: 24px;"> EMS: <span id="ems-count">0</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <img src="bcfd.png" alt="EMS" style="width: 24px; height: 24px;"> BCFD: <span id="bcfd-count">0</span>
+          </div>     
+          <div style="display: flex; align-items: center; gap: 5px;">
+            <strong>Total:</strong> <span id="total-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="roster-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Callsign</th>
+              <th>Name</th>
+              <th>Rank</th>
+              <th>Department</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="roster-body">
+            <!-- Rows dynamically inserted by roster.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="roster.js"></script>
+
+</body>
+</html>

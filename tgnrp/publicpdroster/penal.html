@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="https://i.ibb.co/RTH1qcFH/sasp.png"/>
+  <title>San Andreas State Police</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #1e1e1e;
+      color: #ddd;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #121212;
+      border-right: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar a {
+      padding: 14px 20px;
+      color: #bbb;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    /* Disable hover for non-active links */
+    .sidebar a:not(.active):hover {
+      background-color: inherit;
+      color: #bbb;
+      border-left: 3px solid transparent;
+      cursor: default;
+    }
+
+    /* Active link styling */
+    .sidebar a.active {
+      background-color: #2a2a2a;
+      color: #fff;
+      font-weight: bold;
+      border-left: 3px solid #3f8efc;
+    }
+
+    /* Hover effect only on active link */
+    .sidebar a.active:hover {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    .nav-link {
+      color: #ccc;
+      text-decoration: none;
+      padding: 10px 20px;
+      width: 100%;
+      text-align: left;
+      display: block;
+    }
+
+    .nav-link:hover {
+      background-color: #444;
+      color: #fff;
+    }
+
+    /* Main content area */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    /* Header */
+    .header {
+      background-color: #2b2b2b;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #444;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .search-bar input {
+      padding: 8px 12px;
+      background-color: #333;
+      border: 1px solid #555;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      color: #eee;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #2c2c2c;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      border: 1px solid #525252;
+      padding: 8px 10px;
+      text-align: center;
+      vertical-align: middle;
+      color: #ccc;
+    }
+
+    th {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .left-align {
+      text-align: left;
+    }
+
+    .header-row {
+      background-color: #444;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .tag {
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+      color: white;
+    }
+
+    .tag.red { background-color: #d9534f; }
+    .tag.orange { background-color: #f0ad4e; }
+    .tag.blue { background-color: #5bc0de; }
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+<div style="text-align: center; padding-bottom: 20px;">
+  <img src="sasp.png" alt="Public SASP Roster"
+     style="width: 80px; height: 80px; border-radius: 50%;
+            border: 2px solid #3f8efc; margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);">
+  <div style="color: #fff; font-weight: bold;">Public SASP Roster</div>
+</div>
+    <a href="roster.html">
+      <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+      Roster
+    </a>
+<!--    <a href="authorized.html">
+      <img src="roster.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+      Authorized Units
+    </a>
+-->
+    <a href="penal.html">
+      <img src="penal.png" alt="Logo" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+      Penal Code
+    </a>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main">
+    <!-- Header -->
+    <div class="header">
+      <h1>San Andreas Penal Code</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+        <select id="section-filter" style="margin-left: 10px; padding: 6px; background-color: #333; color: #fff; border: 1px solid #555;">
+          <option value="all">All Sections</option>
+          <option value="definitions">Definitions</option>
+          <option value="charges">Charges</option>
+          <option value="enhancements">Enhancements</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="section-title">Definitions</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Word</th>
+            <th>Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P.C.101</td><td>Public Servant</td><td class="left-align">Any person employed by the EMS, BCFD, State, or the DOJ, including Bar Certified individuals, the Vice Governor, Governor, Judges and Chief Justice.</td></tr>
+          <tr><td>P.C.102</td><td>Peace Officer</td><td class="left-align">Any Police Officer, State Trooper, Highway Patrol, Sheriff Deputy, County Sheriff, or Department of Corrections Officer.</td></tr>
+          <tr><td>P.C.103</td><td>Notary Public</td><td class="left-align">Any person employed directly by the DOJ. This person can notarise affidavits.</td></tr>
+          <tr><td>P.C.104</td><td>Reasonable Suspicion</td><td class="left-align">A specific, justifiable suspicion that is based on specific facts or circumstances about a specific individual.</td></tr>
+          <tr><td>P.C.105</td><td>Probable Cause (PC)</td><td class="left-align">Reasonable grounds for believing a person is guilty of a criminal act, allowing the search, arrest, prosecution, or trial of such a person.</td></tr>
+          <tr><td>P.C.106</td><td>Per</td><td class="left-align">Any charge labelled with Per should be given once for each contraband seized.</td></tr>
+          <tr><td>P.C.107</td><td>Seize</td><td class="left-align">Contraband, weapons, money, substances, and/or vehicles must be seized indefinitely if related to the crime. Do not return unless a Judge specifies otherwise.</td></tr>
+          <tr><td>P.C.108</td><td>Points</td><td class="left-align">Penalty points are issued for vehicular offences. They stay on a person's driving record and they lose their licence if they collect more than 15.</td></tr>
+          <tr><td>P.C.109</td><td>Possession</td><td class="left-align">Contraband (or replicas) having been or is on their person, in their vehicle, or in their estate.</td></tr>
+          <tr><td>P.C.109</td><td>Class A Substance</td><td class="left-align">Cocaine, Methamphetamine (Meth), or Psilocybe Cyanescens (Shrooms), including synthetic alternative</td></tr>
+          <tr><td>P.C.111</td><td>Class B Substance</td><td class="left-align">Marijuana (Weed), Lysergic Acid Diethylamide (Acid), or Lean, including synthetic analogue.</td></tr>
+          <tr><td>P.C.112</td><td>Class 1 Weapon</td><td class="left-align">Any lethal weapon sold and manufactured by Ammu-Nation, including replicas. Full list of weaponry included is listed in the weaponry database.</td></tr>
+          <tr><td>P.C.113</td><td>Class 2 Weapon</td><td class="left-align">Single Fire Pistols not manufactured by Ammu-Nation, including replicas. Full list of weaponry included is listed in the weaponry database.</td></tr>
+          <tr><td>P.C.114</td><td>Class 3 Weapon</td><td class="left-align">Automatic Pistols, Submachine Guns, Shotguns, including replicas. Full list of weaponry included is listed in the weaponry database.</td></tr>
+          <tr><td>P.C.115</td><td>Class 4 Weapon</td><td class="left-align">Assault Rifles, Sniper Rifles, Muskets, including replicas. Full list of weaponry included is listed in the weaponry database.</td></tr>
+          <tr><td>P.C.116</td><td>Class 5 Weapon</td><td class="left-align">Incendiary, and/or explosive devices, including replicas. Full list of weaponry included is listed in the weaponry database.</td></tr>
+          <tr><td>P.C.117</td><td>Property</td><td class="left-align">Anything that is owned by a person or entity.</td></tr>
+          <tr><td>P.C.118</td><td>Government Property</td><td class="left-align">Any property owned or issued by the Government.</td></tr>
+          <tr><td>P.C.119</td><td>Reporter’s Privilege</td><td class="left-align">A “reporter” or “journalist” is protected under constitutional or statutory law, from being compelled to testify about confidential information or sources.</td></tr>
+          <tr><td>P.C.120</td><td>RICO</td><td class="left-align">Racketeering Influenced and Corrupt Organizations Act.</td></tr>
+          <tr><td>P.C.121</td><td>HUT</td><td class="left-align">Held Until Trial, a procedure that only Judges use to stop dangerous people from re-entering society until trial.</td></tr>
+          <tr><td>P.C.122</td><td>Speed Limits</td><td class="left-align">50 mph in a city and town, 100 mph on a divided highway/interstate</td></tr>
+          <tr><td>P.C.123</td><td>General Intent Crime</td><td class="left-align">Offenses where prosecution has to show a person committed a criminal act. No concern whether the accused intended to produce the specific result of that act.</td></tr>
+          <tr><td>P.C.124</td><td>Specific Intent Crime</td><td class="left-align">Offenses where prosecution has to show a person intended to commit an unlawful act, and specifically intended to violate the law.</td></tr>
+          <tr><td>P.C.125</td><td>PlayStation Pistols</td><td class="left-align">VR weaponry are not under the weapon class system and are not illegal. It is advised you do not carry them on you in case they are mistaken for something else.</td></tr>
+          <tr><td>P.C.126</td><td>Narcotics</td><td class="left-align">Painkillers, Antibiotics, Fentanyl or OxyContin (Oxy), including synthetic alternatives.</td></tr>
+          <tr><td>P.C.127</td><td>Lockpicks</td><td class="left-align">"Lockpicks" include Basic Lockpicks, Advanced Lockpicks, and Multitools.</td></tr>
+          <tr><td>P.C.128</td><td>Firearms</td><td class="left-align">Any weapon (including tasers and bean bag shot guns) which will or is designed to expel a projectile by the action of an explosion.</td></tr>
+          <tr><td>P.C.129</td><td>Distilled Spirits</td><td class="left-align">Spirits produced through the process of distillation.</td></tr>
+          <!-- Add more rows -->
+        </tbody>
+      </table>
+
+      <div class="section-title">Charges</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Crime</th>
+            <th>Definition</th>
+            <th>Time</th>
+            <th>Fine</th>
+            <th>Result</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag orange">P.C.201</span></td>
+            <td>Criminal Threat</td>
+            <td class="left-align">Intentionally puts another in the belief of physical harm or offensive contact.</td>
+            <td>10</td>
+            <td>$300</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.202</span></td>
+            <td>Destructive Use of Blasting Agents</td>
+            <td class="left-align">Uses violence to cause physical harm to another person without a weapon.</td>
+            <td>20</td>
+            <td>$800</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.203</span></td>
+            <td>Second Degree Aggravated Assault and Battery</td>
+            <td class="left-align">A spontaneous act of violence using a deadly weapon or dangerous object to cause physical harm to another person, without premeditation or intent to kill.</td>
+            <td>40</td>
+            <td>$1000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.204</span></td>
+            <td>First Degree Aggravated Assault and Battery</td>
+            <td class="left-align">A premeditated and deliberate attack on another person with the intent to cause serious harm or death, where the actions go beyond aggravated assault but do not result in a completed killing.</td>
+            <td>60</td>
+            <td>$1500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.205</span></td>
+            <td>Torture</td>
+            <td class="left-align">Causes extreme pain and suffering to another person.</td>
+            <td>70</td>
+            <td>$1200</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.206</span></td>
+            <td>Maiming</td>
+            <td class="left-align">The act of disabling, disfiguring, removing or permanantly damaging a person's limbs (all extremeties) either intentionally or in a fight.</td>
+            <td>350</td>
+            <td>$4000</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.207</span></td>
+            <td>Terroristic Threat</td>
+            <td class="left-align">Intentionally puts another in the belief or fear of an act of terrorism happening.</td>
+            <td>30</td>
+            <td>$1000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.208</span></td>
+            <td>Terrorism</td>
+            <td class="left-align">A violent, criminal act committed by a person to further goals stemming from political, religious, social, or environmental influences.</td>
+            <td>0</td>
+            <td>$0</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.209</span></td>
+            <td>Involuntary Manslaughter</td>
+            <td class="left-align">Acted recklessly and negligently which resulted in the death of another person.</td>
+            <td>0</td>
+            <td>$0</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.210</span></td>
+            <td>Voluntary Manslaughter</td>
+            <td class="left-align">Acted in the heat of passion caused by being reasonably and strongly provoked which resulted in the death of another person.</td>
+            <td>0</td>
+            <td>$0</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.211</span></td>
+            <td>Second Degree Murder</td>
+            <td class="left-align">The unlawful killing of another person without prior planning, occurring as a result of reckless or intentional violence where death was a foreseeable consequence.</td>
+            <td>0</td>
+            <td>$0</td>
+            <td>Seize</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.212</span></td>
+            <td>First Degree Murder</td>
+            <td class="left-align">The intentional and premeditated killing of another person, carried out with malice and a clear, deliberate intent to cause death.</td>
+            <td>0</td>
+            <td>$0</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.213</span></td>
+            <td>False Imprisonment</td>
+            <td class="left-align">A person who intentionally and unlawfully restrains, detains, or confines another person.</td>
+            <td>10</td>
+            <td>$600</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.214</span></td>
+            <td>Kidnapping</td>
+            <td class="left-align">Intentionally took another person from point A to point B without consent.</td>
+            <td>50</td>
+            <td>$1000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.215</span></td>
+            <td>Destructive Use of Blasting Agents</td>
+            <td class="left-align">Intentionally using an incendiary/explosive device to cause harm to another person</td>
+            <td>85</td>
+            <td>$2500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.301</span></td>
+            <td>Loitering</td>
+            <td class="left-align">Fails to leave property when asked to do so by a relevant representative of the property.</td>
+            <td>10</td>
+            <td>$250</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.302</span></td>
+            <td>Trespassing</td>
+            <td class="left-align">Enters, or remains on land and fails to leave after being ordered to leave or which noted that entry was forbidden</td>
+            <td>10</td>
+            <td>$250-0</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.303</span></td>
+            <td>Burglary</td>
+            <td class="left-align">The act of entering property with the intent to commit a crime. For vehicles specifically, this is known as Auto-Burglary.</td>
+            <td>25</td>
+            <td>$600</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.304</span></td>
+            <td>Robbery</td>
+            <td class="left-align">The unlawful taking of property from the person of another through the use of threat or force.</td>
+            <td>25</td>
+            <td>$400</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.305</span></td>
+            <td>Armed Robbery</td>
+            <td class="left-align">The unlawful taking of property from the person of another by the use of a weapon.</td>
+            <td>40</td>
+            <td>$850</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.306</span></td>
+            <td>Robbery of a Shop</td>
+            <td class="left-align">The unlawful taking of property within a store.</td>
+            <td>40</td>
+            <td>$1000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.307</span></td>
+            <td>Robbery of a Bank</td>
+            <td class="left-align">The unlawful taking of property within a bank.</td>
+            <td>80</td>
+            <td>$2500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.308</span></td>
+            <td>Robbery of a Stockade</td>
+            <td class="left-align">The unlawful taking of property within a Stockade or armored vehicle.</td>
+            <td>110</td>
+            <td>$3000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.309</span></td>
+            <td>Robbery of a Jewellery Store</td>
+            <td class="left-align">The unlawful taking of property within a Jewellery Store.</td>
+            <td>140</td>
+            <td>$3500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.310</span></td>
+            <td>Theft</td>
+            <td class="left-align">Takes personal property of another without permission or consent.</td>
+            <td>10</td>
+            <td>$200</td>
+            <td>Per</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.311</span></td>
+            <td>Grand Theft</td>
+            <td class="left-align">Taking the property of another illegally with the intent to deprive the owner of that property. Value exceeding $3000.</td>
+            <td>15</td>
+            <td>$1000</td>
+            <td>Per</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.312</span></td>
+            <td>Grand Theft Auto</td>
+            <td class="left-align">Taking the vehicle of another illegally with the intent to deprive the owner of that vehicle.</td>
+            <td>30</td>
+            <td>$1000</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.313</span></td>
+            <td>Destruction of Private Property</td>
+            <td class="left-align">Willful destruction or damaging of property in a manner that defaces, mars, or otherwise adds a physical blemish.</td>
+            <td>10</td>
+            <td>$350</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.314</span></td>
+            <td>Possession of Stolen Property</td>
+            <td class="left-align">Has possession of property not belonging to them and the owner has reported said items stolen.</td>
+            <td>10</td>
+            <td>$350</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.315</span></td>
+            <td>Receiving Stolen Property</td>
+            <td class="left-align">Individual has accepted possession of goods or property and knew they were stolen.</td>
+            <td>25</td>
+            <td>$400</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.316</span></td>
+            <td>Corruption</td>
+            <td class="left-align">Improper and unlawful conduct by abusing one's position of power in a way intended to secure a benefit for oneself or another.</td>
+            <td>55</td>
+            <td>$1100</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.317</span></td>
+            <td>Fraud</td>
+            <td class="left-align">The deliberate misrepresentation of fact for the purpose of depriving someone of a valuable possession.</td>
+            <td>20</td>
+            <td>$450</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.318</span></td>
+            <td>Forgery</td>
+            <td class="left-align">Making and/or possession of a false writing with an intent to defraud.</td>
+            <td>30</td>
+            <td>$600</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.319</span></td>
+            <td>Vandalism</td>
+            <td class="left-align">The willful or malicious destruction or defacement of property with malicious intent.</td>
+            <td>10</td>
+            <td>$300</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.320</span></td>
+            <td>Arson</td>
+            <td class="left-align">Starts a fire or causing an explosion with the intent to cause damage after ignition.</td>
+            <td>20</td>
+            <td>$600</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.321</span></td>
+            <td>Animal Abuse</td>
+            <td class="left-align">The act of intentionally harming dogs, cats, and birds (does not include wild animals).</td>
+            <td>20</td>
+            <td>$600</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.322</span></td>
+            <td>Animal Negligence</td>
+            <td class="left-align">The act of intentionally putting a animal on a situation of danger that could possibly harm the animal (does not include wild animals).</td>
+            <td>20</td>
+            <td>$700</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.323</span></td>
+            <td>Hunting Without a License</td>
+            <td class="left-align">The act of operating a weapon designated for hunting without a proper license.</td>
+            <td>50</td>
+            <td>$1500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.324</span></td>
+            <td>Possession of Contraband</td>
+            <td class="left-align">Has possession of 1-10 red, blue, or green decryption keys, 1-10 chips, 1-10 raspberry chips, 1-10 fake plates, 1-10 meth tables, 1-10 catalytic converters or 1-10 pagers.</td>
+            <td>10</td>
+            <td>$150</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.325</span></td>
+            <td>Trafficking of Contraband</td>
+            <td class="left-align">Has possession of 11 or more red, blue, or green decryption keys, 11 or more chips, 11 or more raspberry chips, 11 or more fake plates, 11 or more meth tables, 11 or more catalytic converters or 11 or more pagers.</td>
+            <td>30</td>
+            <td>$400</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.326</span></td>
+            <td>Possession of Contraband in Crime</td>
+            <td class="left-align">Has possession of 1-10 thermite, 1-10 lockpicks, 1-10 tuner chips, 1-10 fake plates, 1-10 boosting tablets, 1-10 meth table, 1-10 acetone, 1-10 lithium batteries, 1-10 sawzalls, or 1-10 pagers, and uses it to aid in a crime specific to the contraband that they are being charged for.</td>
+            <td>15</td>
+            <td>$200</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.327</span></td>
+            <td>Trafficking of Contraband in Crime</td>
+            <td class="left-align">Has possession of 11 or more thermite, 11 or more lockpicks, 11 or more tuner chips, 11 or more fake plates, 11 or more boosting tablets, 11 or more meth table, 11 or more acetone, 11 or more lithium batteries, 11 or more sawzalls, or 11 or more pagers, and uses it to aid in a crime specific to the contraband that they are being charged for.</td>
+            <td>220</td>
+            <td>$3000</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.328</span></td>
+            <td>Breaching Company Regulations</td>
+            <td class="left-align">Intentionally disregarded or breached any of the official company regulations set by the government.</td>
+            <td>10</td>
+            <td>$4000</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.401</span></td>
+            <td>Disorderly Conduct</td>
+            <td class="left-align">A person who intentionally disturbs the public peace and order by language or other conduct.</td>
+            <td>10</td>
+            <td>$400</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.501</span></td>
+            <td>Bribery</td>
+            <td class="left-align">The act of promising to or exchanging property with the corrupt aim of influencing a public official in the discharge of their official duties.</td>
+            <td>25</td>
+            <td>$500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.502</span></td>
+            <td>Disregarding a Lawful Command</td>
+            <td class="left-align">The act of ignoring or disregarding a command given by a peace officer to achieve a reasonable and lawful goal.</td>
+            <td>10</td>
+            <td>$300</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.503</span></td>
+            <td>Impersonation of a Public Servant</td>
+            <td class="left-align">The false representation by one person that they are another or that they occupies the position a public servant.</td>
+            <td>20</td>
+            <td>$500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.504</span></td>
+            <td>Impersonation of a Peace Officer</td>
+            <td class="left-align">The false representation by one person that they are another or that they occupies the position a peace officer.</td>
+            <td>30</td>
+            <td>$900</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.505</span></td>
+            <td>Obstruction of Justice</td>
+            <td class="left-align">An act that "corruptly or by threats or force, or by any threatening letter or communication obstructs the due administration of justice."</td>
+            <td>10</td>
+            <td>$450</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.506</span></td>
+            <td>Resisting a Peace Officer</td>
+            <td class="left-align">A person who avoids or resists apprehension.</td>
+            <td>20</td>
+            <td>$600</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.507</span></td>
+            <td>Felony Resisting a Peace Officer</td>
+            <td class="left-align">A person who avoids or resists apprehension with an attempt or threat to use physical violence.</td>
+            <td>30</td>
+            <td>$1000</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.508</span></td>
+            <td>Misuse of a Mobile Hotline</td>
+            <td class="left-align">A person who intentionally uses the Government, Police or EMS Hotline for other reasons than emergency purposes.</td>
+            <td>5</td>
+            <td>$500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.509</span></td>
+            <td>Tampering with Evidence</td>
+            <td class="left-align">Alters evidence by any form with intent to mislead a public servant who is or may be engaged in such proceeding or investigation.</td>
+            <td>50</td>
+            <td>$2000</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.510</span></td>
+            <td>Unlawful Arrest</td>
+            <td class="left-align">The intentional detention by one person of another without probable cause, a valid arrest warrant, or consent.</td>
+            <td>35</td>
+            <td>$750</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.511</span></td>
+            <td>Contempt of Court</td>
+            <td class="left-align">Any form of disturbance that may impede the functioning of the court. The punishment may be greater depending on the severity of disturbance.</td>
+            <td>20</td>
+            <td>$500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.512</span></td>
+            <td>Breach of Contract</td>
+            <td class="left-align">Any form of failure to the terms of a legally binding contract.</td>
+            <td>10</td>
+            <td>$1000</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.513</span></td>
+            <td>Violation of a Court Order</td>
+            <td class="left-align">Any form of violation of a legally binding contract presented by a Judge.</td>
+            <td>30</td>
+            <td>$1400</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.514</span></td>
+            <td>Wearing a Disguise to Evade Police</td>
+            <td class="left-align">Wearing a mask or disguise to evade recognitition or identification in the commission of a crime, or escape when charged with a crime.</td>
+            <td>0</td>
+            <td>$800</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.515</span></td>
+            <td>Perjury</td>
+            <td class="left-align">Knowingly providing any false testimony while under oath including both written and verbal.</td>
+            <td>50</td>
+            <td>$1500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.516</span></td>
+            <td>Violating a Protective Order</td>
+            <td class="left-align">Any intentional and knowing violation of a protective order from either party included in the order.</td>
+            <td>50</td>
+            <td>$1500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.517</span></td>
+            <td>Prisoner Escaping Custody.</td>
+            <td class="left-align">An individual being transported by a Peace Officer, escapes custody of Law Enforcement.</td>
+            <td>50</td>
+            <td>$1500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.518</span></td>
+            <td>Rescuing a Prisoner</td>
+            <td class="left-align">An individual who rescues or aids a prisoner in escape from lawful custody.</td>
+            <td>100</td>
+            <td>$1500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.519</span></td>
+            <td>Sightseeing at the Scene of an Emergency</td>
+            <td class="left-align">Any person who goes to or stops at the scene of an emergency for the purpose of viewing the scene or the activities of peace officers, firefighters, or emergency medical personnel during the course of their duties at the scene; unless, it is a part of the duties of that person’s employment.</td>
+            <td>15</td>
+            <td>$250</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.601</span></td>
+            <td>Incitement to Riot</td>
+            <td class="left-align">Conduct, words, or other means that urge or naturally lead others to riot, violence, or insurrection.</td>
+            <td>10</td>
+            <td>$450</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.602</span></td>
+            <td>Public Intoxication</td>
+            <td class="left-align">Being in any area that is not private while under the influence of alchohol and/or drugs.</td>
+            <td>5</td>
+            <td>$300</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.603</span></td>
+            <td>Public Endangerment</td>
+            <td class="left-align">Any person who recklessly engages in conduct which places or may place another person in danger of death or serious bodily injury.</td>
+            <td>20</td>
+            <td>$400</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.604</span></td>
+            <td>Verbal Harassment</td>
+            <td class="left-align">A person with intent to harass, annoy or alarm another with the use of speech.</td>
+            <td>30</td>
+            <td>$300</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.605</span></td>
+            <td>Civil Negligence</td>
+            <td class="left-align">Conduct which falls below a standard which a reasonable person would deem safe.</td>
+            <td>10</td>
+            <td>$400</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.606</span></td>
+            <td>Criminal Negligence</td>
+            <td class="left-align">Conduct which falls below a standard which a reasonable person would deem safe with the intent to harm another person.</td>
+            <td>20</td>
+            <td>$500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.701</span></td>
+            <td>Maintaining a Place for Distribution</td>
+            <td class="left-align">Having keys to a property for the purpose of selling, giving away, storing, or using any Class B substance without a sales permit, Class A substance, narcotics, contraband or illegal weapons.</td>
+            <td>25</td>
+            <td>$600</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.702</span></td>
+            <td>Felony Maintaining a Place for Distribution</td>
+            <td class="left-align">Having keys to a property for the purpose of selling, giving away, storing illegal weapons.</td>
+            <td>50</td>
+            <td>$1200</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.703</span></td>
+            <td>Sale of a Controlled Substance</td>
+            <td class="left-align">The act of offering, selling, transporting, or giving away narcotics, a Class B Substance or Class A Substance to another person without a sales permit.</td>
+            <td>20</td>
+            <td>$400</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.704</span></td>
+            <td>Possession of a Class B Substance</td>
+            <td class="left-align">Possession of 11-24 joints without a sales permit, 1-19q of processed or unprocessed weed (4q=1oz), 1-4 bud of weed, 1-4 acid, or 1-6 lean.</td>
+            <td>5</td>
+            <td>$200</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.705</span></td>
+            <td>Drug Trafficking of a Class B Substance</td>
+            <td class="left-align">Possession of 25 or more joints without a sales permit, 20q or more of processed or unprocessed weed (4q=1oz) 5 or more buds of weed, 5 or more acid, or 7 or more lean.</td>
+            <td>50</td>
+            <td>$3500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.706</span></td>
+            <td>Possession of a Class A Substance</td>
+            <td class="left-align">Possession of 1-7 bags of cocaine, 1-7 bags of meth, or 1-4 shrooms.</td>
+            <td>10</td>
+            <td>$500</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.707</span></td>
+            <td>Drug Trafficking of a Class A Substance</td>
+            <td class="left-align">Possession of 1 or more bricks of cocaine, 8 or more bags of cocaine, 8 or more bags of meth, or 5 or more shrooms.</td>
+            <td>70</td>
+            <td>$5000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.708</span></td>
+            <td>Intention to Sell Distilled Spirits</td>
+            <td class="left-align">Possession of 3 or more distilled spirits, with the clear intention to sell without a license.</td>
+            <td>5</td>
+            <td>$100</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.709</span></td>
+            <td>Possession of Narcotics</td>
+            <td class="left-align">Possession of 1-10 narcotics without a prescription from a licensed doctor currently working with or for the EMS.</td>
+            <td>10</td>
+            <td>$400</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.710</span></td>
+            <td>Drug Trafficking of Narcotics</td>
+            <td class="left-align">Possession of 11 or more narcotics without a prescription from a licensed doctor currently working with or for the EMS.</td>
+            <td>70</td>
+            <td>$4500</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.711</span></td>
+            <td>Manufacturing Controlled Substances</td>
+            <td class="left-align">The manufacturing, producing, or importing of any Narcotics or Class A or B substances without a sales permit.</td>
+            <td>35</td>
+            <td>$1000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.712</span></td>
+            <td>Mining Without a License</td>
+            <td class="left-align">The activity of extracting gemstones or minerals from the ground without a mining license.</td>
+            <td>20</td>
+            <td>$1000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.713</span></td>
+            <td>Mining Without a Scanner</td>
+            <td class="left-align">The activity of extracting gemstones or minerals from the ground without a gemstone scanner is considered civil negligence.</td>
+            <td>15</td>
+            <td>$500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.801</span></td>
+            <td>Driving Without a License</td>
+            <td class="left-align">Operating a motor vehicle without proper identification.</td>
+            <td>0</td>
+            <td>$300</td>
+            <td>Seize</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.802</span></td>
+            <td>Driving With a Suspended License</td>
+            <td class="left-align">Operating a motor vehicle with a suspended license.</td>
+            <td>10</td>
+            <td>$400</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.803</span></td>
+            <td>Hit and Run</td>
+            <td class="left-align">Leaving the scene of an accident while operating a vehicle. Failing to stop and render assistance if vehicular accident for which you are at fault.</td>
+            <td>25</td>
+            <td>$750</td>
+            <td>Seize</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.804</span></td>
+            <td>Speeding</td>
+            <td class="left-align">The act of driving over the speed limit, or greater than, or in a manner other than is reasonable and prudent for the particular location, given the conditions of traffic, weather, and road surface and having regard to the actual and potential hazards existing.</td>
+            <td>0</td>
+            <td>$300</td>
+            <td>-</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.805</span></td>
+            <td>Excessive Speeding</td>
+            <td class="left-align">The act of driving 30+ mph over the speed limit, or greater than, or in a manner other than is reasonable and prudent for the particular location, given the conditions of traffic, weather, and road surface and having regard to the actual and potential hazards existing.</td>
+            <td>30</td>
+            <td>$600</td>
+            <td>Seize</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.806</span></td>
+            <td>Reckless Driving</td>
+            <td class="left-align">Operating a motor vehicle in such a manner that has a disregard of public safety.</td>
+            <td>20</td>
+            <td>$600</td>
+            <td>-</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.807</span></td>
+            <td>Traffic Violation</td>
+            <td class="left-align">Operating a vehicle in any way with disregard to public traffic laws.</td>
+            <td>0</td>
+            <td>$200</td>
+            <td>Per</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.808</span></td>
+            <td>Parking Violation</td>
+            <td class="left-align">Parking of a vehicle in any area that isn't designated for public parking.</td>
+            <td>0</td>
+            <td>$200</td>
+            <td>Per</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.809</span></td>
+            <td>Evading a Peace Officer</td>
+            <td class="left-align">A person (non-criminal) who has been given a visual or auditory signal by an officer, and willfully refuse to stop or attempts to elude the officer.</td>
+            <td>15</td>
+            <td>$350</td>
+            <td>Seize</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.810</span></td>
+            <td>Felony Evading a Peace Officer</td>
+            <td class="left-align">A person who has been given a visual or auditory signal by an officer, and willfully refuse to stop their motor vehicle.</td>
+            <td>30</td>
+            <td>$700</td>
+            <td>Seize</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.811</span></td>
+            <td>Driving Under the Influence (DUI)</td>
+            <td class="left-align">Operating a motor vehicle while under the effects of alcohol or drugs.</td>
+            <td>10</td>
+            <td>$400</td>
+            <td>Seize</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.812</span></td>
+            <td>Jaywalking</td>
+            <td class="left-align">Crossing any 4 lane (2 in either direction) highway/interstate without using the designated crosswalk.</td>
+            <td>0</td>
+            <td>$50</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.813</span></td>
+            <td>Joyriding</td>
+            <td class="left-align">Operating a motor vehicle without explicit permission from the owner of a vehicle (where PC can not be established that the vehicle is stolen).</td>
+            <td>10</td>
+            <td>$350</td>
+            <td>Seize</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.814</span></td>
+            <td>Unauthorized Operations of an Aircraft</td>
+            <td class="left-align">Operating an aircraft without the corresponding pilot license of the aircraft being operated.</td>
+            <td>20</td>
+            <td>$1500</td>
+            <td>Seize</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.815</span></td>
+            <td>Reckless Operations of an Aircraft</td>
+            <td class="left-align">Operating an aircraft with disregard of public safety.</td>
+            <td>25</td>
+            <td>$2500</td>
+            <td>Seize</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.816</span></td>
+            <td>Improper Operations of an Aircraft</td>
+            <td class="left-align">Operating an aircraft in disregard of Aviation SOP's by not engaging on the correct radio channel or by not having the correct tools (Flight radar)</td>
+            <td>10</td>
+            <td>$500</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.817</span></td>
+            <td>Tampering with a Motor Vehicle</td>
+            <td class="left-align">Injure, tamper, break, or remove any part of a vehicle, or it's contents, without the consent of the owner.</td>
+            <td>15</td>
+            <td>$750</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.818</span></td>
+            <td>Engaging in a Speed Contest</td>
+            <td class="left-align">Engaging in a high-speed motor vehicle race against another vehicle or vehicles.</td>
+            <td>15</td>
+            <td>$300</td>
+            <td>Seize</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.901</span></td>
+            <td>Carrying a Firearm Without a License</td>
+            <td class="left-align">Act of carrying and/or concealing a firearm without proper identification/documentation to go along with it.</td>
+            <td>25</td>
+            <td>$400</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.902</span></td>
+            <td>Brandishing a Weapon</td>
+            <td class="left-align">The act of openly carrying a weapon, replica, or similar object in an attempt to elicit fear.</td>
+            <td>20</td>
+            <td>$350</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.903</span></td>
+            <td>Weapons Discharge Violation</td>
+            <td class="left-align">Discharging any firearm within city limits, or in Blaine County on Government Property, without a lawful reason for doing so.</td>
+            <td>10</td>
+            <td>$200</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.904</span></td>
+            <td>Felony Weapons Discharge Violation</td>
+            <td class="left-align">Discharging any firearm without a lawful reason for doing so which endangers the safety of the public.</td>
+            <td>20</td>
+            <td>$400</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.905</span></td>
+            <td>Display of Tactical Gear</td>
+            <td class="left-align">Act of wearing and refusing to remove any tactical vests, or holsters, in plain view of the public.</td>
+            <td>5</td>
+            <td>$200</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.906</span></td>
+            <td>Possession of Unregistered Firearm</td>
+            <td class="left-align">Act of carrying and/or concealing a firearm that does not have a valid serial number.</td>
+            <td>10</td>
+            <td>$500</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.907</span></td>
+            <td>Possession of Class 2 Weapon</td>
+            <td class="left-align">Act of carrying and/or concealing a Class 2 weapon.</td>
+            <td>30</td>
+            <td>$1000</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.908</span></td>
+            <td>Possession of Class 3 Weapon</td>
+            <td class="left-align">Act of carrying and/or concealing a Class 3 weapon.</td>
+            <td>40</td>
+            <td>$2000</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.909</span></td>
+            <td>Possession of Class 4 Weapon</td>
+            <td class="left-align">Act of carrying and/or concealing a Class 4 weapon.</td>
+            <td>50</td>
+            <td>$3000</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.910</span></td>
+            <td>Possession of Class 5 Weapon</td>
+            <td class="left-align">Act of carrying and/or concealing a Class 5 weapon.</td>
+            <td>60</td>
+            <td>$4500</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.911</span></td>
+            <td>Trafficking of Class 2 Weapon</td>
+            <td class="left-align">Possesion of 3 or more Class 2 weapons.</td>
+            <td>150</td>
+            <td>$5000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.912</span></td>
+            <td>Trafficking of Class 3 Weapon</td>
+            <td class="left-align">Possesion of 3 or more Class 3 weapons.</td>
+            <td>200</td>
+            <td>$8000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.913</span></td>
+            <td>Trafficking of Class 4 Weapon</td>
+            <td class="left-align">Possession of 3 or more Class 4 weapons.</td>
+            <td>250</td>
+            <td>$11000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.914</span></td>
+            <td>Trafficking of Class 5 Weapon</td>
+            <td class="left-align">Possession of 3 or more Class 5 weapons.</td>
+            <td>275</td>
+            <td>$17000</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.915</span></td>
+            <td>Possession of Extended Magazines</td>
+            <td class="left-align">Any person in possession of any large-capacity magazine, including when it is attached to any weapon, is guilty of a misdemeanor. This shall not apply to a peace officer when on duty and when the use of extended magazines is authorized and is within the course and scope of their duties.</td>
+            <td>10</td>
+            <td>$500</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.916</span></td>
+            <td>Possession of Silencers</td>
+            <td class="left-align">Any person in possession of a silencer, including when it is attached to any weapon, is guilty of a felony. This shall not apply to a peace officer when on duty and when the use of silencers is authorized and is within the course and scope of their duties.</td>
+            <td>30</td>
+            <td>$1500</td>
+            <td>Per, Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag red">P.C.1001</span></td>
+            <td>Racketeering</td>
+            <td class="left-align">A pattern of commiting Criminal Profiteering crimes, which may include Money Laundering, Trafficking and Murder charges.</td>
+            <td>0</td>
+            <td>$0</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><span class="tag orange">P.C.1002</span></td>
+            <td>Gaming</td>
+            <td class="left-align">Dealing, playing or betting at, or against, any card, banking, or percentage game with dice, cards, or any device for money, credits or other representative of value, outside of a state approved card-room or Diamond Casino.</td>
+            <td>5</td>
+            <td>$200</td>
+            <td>Seize</td>
+            <td></td>
+          </tr>
+          <!-- Add more rows -->
+        </tbody>
+      </table>
+      <div class="section-title">Enhancements</div>
+        <table>
+        <thead>
+            <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Definition</th>
+            <th>Multiplier</th>
+            <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>P.C.1101</td>
+            <td>Accessory Before The Fact (ACC-BTF)</td>
+            <td class="left-align">Any person not present when the crime itself is committed, but has knowledge of the crime before or after the fact, and may assist in its commission.</td>
+            <td>25%</td>
+            <td>Seize</td>
+            </tr>
+            <tr>
+            <td>P.C.1102</td>
+            <td>Accessory After The Fact (ACC-ATF)</td>
+            <td class="left-align">Any person who aids or abets someone who has committed a crime after the crime has been committed with the intent to help the person avoid arrest or punishment.</td>
+            <td>75%</td>
+            <td>Seize</td>
+            </tr>
+            <tr>
+            <td>P.C.1103</td>
+            <td>Aiding and Abetting (AAA)</td>
+            <td class="left-align">Any person who aids in the active commission of a crime shall be given the same punishment.</td>
+            <td>100%</td>
+            <td>Seize</td>
+            </tr>
+            <tr>
+            <td>P.C.1104</td>
+            <td>Applicability (APP)</td>
+            <td class="left-align">Charges labelled with Per as defined in TITLE 1. can be stacked, taking care to only add additional times and fines if it states PER next to the time and fines.</td>
+            <td>100%</td>
+            <td>Seize</td>
+            </tr>
+            <tr>
+            <td>P.C.1105</td>
+            <td>Attempt (ATT)</td>
+            <td class="left-align">A person who attempts to commit any crime but fails, is prevented, or is intercepted, shall be given the same punishment as if the offense was commited.</td>
+            <td>100%</td>
+            <td>Seize</td>
+            </tr>
+            <tr>
+            <td>P.C.1106</td>
+            <td>Conspiracy (CON)</td>
+            <td class="left-align">A person who conspires to commit any crime shall be given the same punishment as if the offense was commited.</td>
+            <td>100%</td>
+            <td>Seize</td>
+            </tr>
+            <tr>
+            <td>P.C.1107</td>
+            <td>Soliciting (SOL)</td>
+            <td class="left-align">A person who solicits for the commission or perpetration of any crime shall be given a similar punishments as if the offense was committed.</td>
+            <td>50%</td>
+            <td>Seize</td>
+            </tr>
+            <tr>
+            <td>P.C.1108</td>
+            <td>Gang Enhancement (GE)</td>
+            <td class="left-align">Any criminal activity with 2 or more known gang members involved shall be given a harsher total time and fine to deter future offences.</td>
+            <td>150%</td>
+            <td>-</td>
+            </tr>
+            <tr>
+            <td>P.C.1109</td>
+            <td>Protected Persons (PP)</td>
+            <td class="left-align">Any criminal activity targeted at a public servant or peace officer shall be given a harsher total time and fine to deter future offences.</td>
+            <td>140%</td>
+            <td>-</td>
+            </tr>
+            <tr>
+            <td>P.C.1110</td>
+            <td>Public Menace (PM)</td>
+            <td class="left-align">Any person convicted of a serious felony who previously has been convicted of a serious felony is subject to an increase on their sentence per count of prior serious felony. (Manually add 600 months)</td>
+            <td>100%</td>
+            <td>+600 Months Per</td>
+            </tr>
+            <tr>
+            <td>P.C.1111</td>
+            <td>Intent to Sell (ITS)</td>
+            <td class="left-align">A person who shows clear intent to sell; drugs, contraband or weaponry shall be given a harsher total time and fine to deter future offences.</td>
+            <td>150%</td>
+            <td>-</td>
+            </tr>
+            <tr>
+            <td>P.C.1112</td>
+            <td>Protected Property (P-Prop)</td>
+            <td class="left-align">Any criminal activity targeted at a public servant's or peace officer's property or governement property shall be given a harsher total time and fine to deter future offences.</td>
+            <td>120%</td>
+            <td>-</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+  </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('.search-bar input');
+    const sectionFilter = document.getElementById('section-filter');
+    const tables = document.querySelectorAll('.content table');
+
+    // Autofocus search bar
+    searchInput.focus();
+
+    function filterTables() {
+      const filter = searchInput.value.toLowerCase().trim();
+      const selected = sectionFilter.value;
+      const sectionMap = {
+        definitions: 0,
+        charges: 1,
+        enhancements: 2
+      };
+
+      tables.forEach((table, index) => {
+        // Hide tables not matching the selected section filter (if not 'all')
+        if (selected !== 'all' && index !== sectionMap[selected]) {
+          table.style.display = 'none';
+          return;
+        } else {
+          table.style.display = '';
+        }
+
+        const originalRows = Array.from(table.querySelectorAll('tbody tr'));
+        const tbody = table.querySelector('tbody');
+        tbody.innerHTML = '';
+        let matchFound = false;
+
+        originalRows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          const words = text.split(/\s+/);
+          const match = words.some(word => word.startsWith(filter));
+
+          // Show row if search is empty or if any word matches the filter
+          if (filter === '' || match) {
+            tbody.appendChild(row);
+            matchFound = true;
+          }
+        });
+
+        // Show "No results found" if no match
+        if (!matchFound) {
+          const colCount = table.querySelectorAll('thead th').length;
+          tbody.innerHTML = `<tr><td colspan="${colCount}" style="text-align: center; color: #888;">No results found</td></tr>`;
+        }
+      });
+    }
+
+    // Trigger filtering on input and dropdown change
+    searchInput.addEventListener('input', filterTables);
+    sectionFilter.addEventListener('change', filterTables);
+  });
+  // Get current filename from URL
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Get all sidebar links
+  const links = document.querySelectorAll('.sidebar a');
+
+  // Loop through links and set active class based on href match
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+
+</script>
+
+</body>
+</html>

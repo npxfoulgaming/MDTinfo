@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Promotion Message Generator</title>
+	<link rel="shortcut icon" href="cash.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+
+<body onLoad="loadDarkmode()">
+	<div id="form">
+		<div class="form-group">
+			<style>
+    			body {
+        		    font-family: 'Nunito';font-size: 18px;
+    			}
+    			</style>
+			<h1><span style="font-weight: bold; font-size: 40px; text-align: center;">Promotion & More Message Generator</span></h1>
+			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
+			<label for="darkmode">Darker mode</label>
+			<br />
+		</div>
+		<div class="form-group">
+            <label style="font-size: 22px;">Details:</label>
+            Select Message Type:
+            <select id="messageType">
+                <option>Promotion</option>
+				<option>Cadet Promotion</option>
+				<option>Demotion</option>
+				<option></option>
+                <option>FTP - Accepted</option>
+                <option>FTP - On Hold</option>
+                <option>FTP - Declined</option>
+				<option></option>
+				<option>SWAT - Accepted</option>
+                <option>SWAT - On Hold</option>
+                <option>SWAT - Declined</option>
+				<option></option>
+                <option>SASP Application - Accepted</option>
+                <option>SASP Application - Declined</option>
+            </select>
+        <div class="form-group">
+            <br />
+			New Rank (If Applicable):
+            <select id="rank">
+				<option>Trooper</option>
+				<option>Trooper First Class</option>
+				<option>Senior Trooper</option>
+				<option>Corporal</option>
+				<option>Sergeant</option>
+				<option>Sergeant First Class</option>
+				<option>Lieutenant</option>
+				<option>Captain</option>
+				<option>Deputy Chief</option>
+				<option>Assistant Chief</option>
+			</select>
+			<br />
+            New Callsign (If Applicable):
+            <input type="text" min="0" id="callsign" placeholder="X-100">
+        </div>
+	</div>
+	
+    <textarea class="wide" id="reportBody">Fill out the above!</textarea>
+	<!--<pre id="reportBody"></pre> -->
+
+	<script src="generator.js"></script>
+</body>
+
+</html>

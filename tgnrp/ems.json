@@ -1,0 +1,12 @@
+[
+  {
+    "ID": "001",
+    "Officer Name": "Dr FouL",
+    "Officer Rank": "Chairman",
+    "Department": "EMS",
+    "Status": "Active",
+    "Authorized Date": "2025-06-01",
+    "Authorized Weapons": ["Carbine Rifle"],
+    "Authorized Units": ["Air"]
+  }
+]
